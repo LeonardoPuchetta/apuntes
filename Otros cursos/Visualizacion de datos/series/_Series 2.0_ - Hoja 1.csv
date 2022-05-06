@@ -1,0 +1,341 @@
+Serie,Titulo,Valoracion,Temporada,Capitulo,Votos,z-score
+The Wire,The Target,8,1,1,5433,-1.15
+The Wire,The Detail,8.3,1,2,4434,-0.65
+The Wire,The Buys,8.3,1,3,4159,-0.65
+The Wire,Old Cases,8.3,1,4,4019,-0.65
+The Wire,The Pager,8.4,1,5,3855,-0.48
+The Wire,The Wire,8.6,1,6,4029,-0.14
+The Wire,One Arrest,8.6,1,7,3769,-0.14
+The Wire,Lessons,8.6,1,8,3748,-0.14
+The Wire,Game Day,8.8,1,9,3872,0.20
+The Wire,The Cost,9.2,1,10,4436,0.88
+The Wire,The Hunt,8.9,1,11,3875,0.37
+The Wire,Cleaning Up,9.1,1,12,4186,0.71
+The Wire,Sentencing,9,1,13,4073,0.54
+The Wire,Ebb Tide,7.9,2,1,3588,-1.32
+The Wire,Collateral Damage,8.2,2,2,3354,-0.82
+The Wire,Hot Shots,8.2,2,3,3246,-0.82
+The Wire,Hard Cases,8.2,2,4,3204,-0.82
+The Wire,Undertow,8.3,2,5,3134,-0.65
+The Wire,All Prologue,8.8,2,6,3548,0.20
+The Wire,Backwash,8.4,2,7,3093,-0.48
+The Wire,Duck and Cover,8.5,2,8,3153,-0.31
+The Wire,Stray Rounds,8.6,2,9,3183,-0.14
+The Wire,Storm Warnings,9,2,10,3538,0.54
+The Wire,Bad Dreams,9.2,2,11,3933,0.88
+The Wire,Port in a Storm,9,2,12,3676,0.54
+The Wire,Time After Time,8.2,3,1,3058,-0.82
+The Wire,All Due Respect,8.5,3,2,3025,-0.31
+The Wire,Dead Soldiers,8.5,3,3,3016,-0.31
+The Wire,Amsterdam,8.5,3,4,3001,-0.31
+The Wire,Straight and True,8.7,3,5,2997,0.03
+The Wire,Homecoming,8.7,3,6,2978,0.03
+The Wire,Back Burners,8.6,3,7,2925,-0.14
+The Wire,Moral Midgetry,8.9,3,8,3181,0.37
+The Wire,Slapstick,8.8,3,9,2994,0.20
+The Wire,Reformation,8.8,3,10,3007,0.20
+The Wire,Middle Ground,9.6,3,11,4793,1.56
+The Wire,Mission Accomplished,9.3,3,12,3744,1.05
+The Wire,Boys of Summer,8.4,4,1,2959,-0.48
+The Wire,Soft Eyes,8.6,4,2,2810,-0.14
+The Wire,Home Rooms,8.7,4,3,2849,0.03
+The Wire,Refugees,8.5,4,4,2747,-0.31
+The Wire,Alliances,8.6,4,5,2769,-0.14
+The Wire,Margin of Error,8.8,4,6,2863,0.20
+The Wire,Unto Others,8.6,4,7,2714,-0.14
+The Wire,Corner Boys,8.6,4,8,2775,-0.14
+The Wire,Know Your Place,8.6,4,9,2706,-0.14
+The Wire,Misgivings,8.8,4,10,2893,0.20
+The Wire,A New Day,9,4,11,3003,0.54
+The Wire,That's Got His Own,9.3,4,12,3399,1.05
+The Wire,Final Grades,9.5,4,13,4237,1.39
+The Wire,More with Less,8.2,5,1,2780,-0.82
+The Wire,Unconfirmed Reports,8.3,5,2,2668,-0.65
+The Wire,Not for Attribution,8.6,5,3,2720,-0.14
+The Wire,Transitions,8.9,5,4,2819,0.37
+The Wire,React Quotes,8.7,5,5,2697,0.03
+The Wire,The Dickensian Aspect,8.5,5,6,2617,-0.31
+The Wire,Took,8.6,5,7,2673,-0.14
+The Wire,Clarifications,8.9,5,8,2943,0.37
+The Wire,Late Editions,9.3,5,9,3332,1.05
+The Wire,-30-,9.6,5,10,4795,1.56
+This is Us,Pilot,9.3,1,1,5778,1.05
+This is Us,The Big Three,8.6,1,2,3317,-0.14
+This is Us,Kyle,8.7,1,3,3101,0.03
+This is Us,The Pool,8.9,1,4,3077,0.37
+This is Us,The Game Plan,8.8,1,5,2960,0.20
+This is Us,Career Days,8.6,1,6,2502,-0.14
+This is Us,The Best Washing Machine in the Whole World,8.6,1,7,2408,-0.14
+This is Us,Pilgrim Rick,9.2,1,8,2981,0.88
+This is Us,The Trip,8.8,1,9,2595,0.20
+This is Us,Last Christmas,9.1,1,10,2794,0.71
+This is Us,The Right Thing to Do,8.5,1,11,2186,-0.31
+This is Us,The Big Day,9,1,12,2748,0.54
+This is Us,Three Sentences,8.8,1,13,2478,0.20
+This is Us,I Call Marriage,8.4,1,14,2081,-0.48
+This is Us,Jack Pearson's Son,9,1,15,2645,0.54
+This is Us,Memphis,9.5,1,16,4383,1.39
+This is Us,What Now?,9.1,1,17,2459,0.71
+This is Us,Moonshadow,8.7,1,18,2267,0.03
+This is Us,A Father's Advice,8.9,2,1,2386,0.37
+This is Us,A Manny-Splendored Thing,8.5,2,2,1983,-0.31
+This is Us,Déjà Vu,8.5,2,3,1929,-0.31
+This is Us,Still There,8.3,2,4,1967,-0.65
+This is Us,Brothers,8.4,2,5,2142,-0.48
+This is Us,The 20's,8.5,2,6,2094,-0.31
+This is Us,The Most Disappointed Man,8.9,2,7,2012,0.37
+This is Us,Number One,9.2,2,8,2767,0.88
+This is Us,Number Two,8.8,2,9,2065,0.20
+This is Us,Number Three,8.9,2,10,2171,0.37
+This is Us,The Fifth Wheel,9.2,2,11,2382,0.88
+This is Us,Clooney,8.5,2,12,1875,-0.31
+This is Us,That'll Be the Day,9.4,2,13,2983,1.22
+This is Us,Super Bowl Sunday,9.8,2,14,5357,1.90
+This is Us,The Car,9.2,2,15,2337,0.88
+This is Us,"Vegas, Baby",8,2,16,1908,-1.15
+This is Us,This Big Amazing Beautiful Life,7.6,2,17,2060,-1.83
+This is Us,The Wedding,8.7,2,18,2089,0.03
+This is Us,Nine Bucks,8.7,3,1,1491,0.03
+This is Us,A Philadelphia Story,8.2,3,2,1226,-0.82
+This is Us,Katie Girls,8.6,3,3,1292,-0.14
+This is Us,Vietnam,8.1,3,4,1424,-0.98
+This is Us,Toby,8.3,3,5,1151,-0.65
+This is Us,Kamsahamnida,8.5,3,6,1151,-0.31
+This is Us,Sometimes,8.5,3,7,1165,-0.31
+This is Us,Six Thanksgivings,8.3,3,8,1136,-0.65
+This is Us,The Beginning Is the End Is the Beginning,8.9,3,9,1324,0.37
+This is Us,The Last Seven Weeks,8.5,3,10,1107,-0.31
+This is Us,Songbird Road: Part One,9.2,3,11,1428,0.88
+This is Us,Songbird Road: Part Two,8.5,3,12,1083,-0.31
+This is Us,Our Little Island Girl,8.7,3,13,1317,0.03
+This is Us,The Graduates,8.6,3,14,1029,-0.14
+This is Us,The Waiting Room,8.2,3,15,1179,-0.82
+This is Us,Don't Take My Sunshine Away,8.2,3,16,995,-0.82
+This is Us,R & B,8.8,3,17,1155,0.20
+This is Us,Her,9.2,3,18,1425,0.88
+This is Us,Strangers,9.1,4,1,1856,0.71
+This is Us,The Pool: Part Two,8.5,4,2,1059,-0.31
+This is Us,Unhinged,8.6,4,3,1035,-0.14
+This is Us,Flip a Coin,8.6,4,4,1000,-0.14
+This is Us,Storybook Love,9,4,5,1118,0.54
+This is Us,The Club,8.5,4,6,1012,-0.31
+This is Us,The Dinner and the Date,8.8,4,7,1056,0.20
+This is Us,Sorry,8.7,4,8,980,0.03
+This is Us,"So Long, Marianne",9.3,4,9,1276,1.05
+This is Us,Light and Shadows,8.9,4,10,1027,0.37
+This is Us,A Hell of a Week: Part One,8.8,4,11,1005,0.20
+This is Us,A Hell of a Week: Part Two,8.8,4,12,1038,0.20
+This is Us,A Hell of a Week: Part Three,8.4,4,13,955,-0.48
+This is Us,The Cabin,9.5,4,14,1691,1.39
+This is Us,Clouds,8.8,4,15,948,0.20
+This is Us,New York New York New York,8.8,4,16,954,0.20
+This is Us,After the Fire,8.9,4,17,1079,0.37
+This is Us,Strangers: Part Two,9.4,4,18,1414,1.22
+This is Us,Forty: Part One,7.5,5,1,1457,-2.00
+This is Us,Forty: Part Two,7.6,5,2,1279,-1.83
+This is Us,Changes,7.6,5,3,953,-1.83
+This is Us,Honestly,8.4,5,4,891,-0.48
+This is Us,A Long Road Home,8.2,5,5,837,-0.82
+This is Us,Birth Mother,9,5,6,1420,0.54
+This is Us,There,8.6,5,7,859,-0.14
+This is Us,In the Room,9.1,5,8,1066,0.71
+This is Us,The Ride,8.3,5,9,762,-0.65
+This is Us,I've Got This,8.2,5,10,700,-0.82
+This is Us,One Small Step...,8.9,5,11,911,0.37
+This is Us,Both Things Can Be True,8,5,12,641,-1.15
+This is Us,Brotherly Love,8.4,5,13,760,-0.48
+This is Us,The Music and the Mirror,8.4,5,14,590,-0.48
+This is Us,Jerry 2.0,8.1,5,15,530,-0.98
+This is Us,The Adirondacks,8.9,5,16,728,0.37
+Lost,Pilot: Part 1,9.2,1,1,10265,0.88
+Lost,Pilot: Part 2,9.1,1,2,7833,0.71
+Lost,Tabula Rasa,8.5,1,3,6189,-0.31
+Lost,Walkabout,9.1,1,4,6987,0.71
+Lost,White Rabbit,8.4,1,5,5648,-0.48
+Lost,House of the Rising Sun,8.2,1,6,5502,-0.82
+Lost,The Moth,8.5,1,7,5534,-0.31
+Lost,Confidence Man,8.7,1,8,5624,0.03
+Lost,Solitary,8.5,1,9,5292,-0.31
+Lost,Raised by Another,8.7,1,10,5379,0.03
+Lost,All the Best Cowboys Have Daddy Issues,8.8,1,11,5413,0.20
+Lost,Whatever the Case May Be,8,1,12,5129,-1.15
+Lost,Hearts and Minds,8.2,1,13,5097,-0.82
+Lost,Special,8.2,1,14,4973,-0.82
+Lost,Homecoming,8.4,1,15,5007,-0.48
+Lost,Outlaws,8.6,1,16,5116,-0.14
+Lost,...In Translation,8.5,1,17,4993,-0.31
+Lost,Numbers,9.1,1,18,5745,0.71
+Lost,Deus Ex Machina,9.1,1,19,5636,0.71
+Lost,Do No Harm,8.9,1,20,5450,0.37
+Lost,The Greater Good,8.3,1,21,4803,-0.65
+Lost,Born to Run,8.1,1,22,4865,-0.98
+Lost,Exodus: Part 1,9.1,1,23,5698,0.71
+Lost,Exodus: Part 2 (Part I),9.3,1,24,6359,1.05
+Lost,Exodus: Part 2 (Part II),9.3,1,25,3101,1.05
+Lost,"Man of Science, Man of Faith",9.1,2,1,6084,0.71
+Lost,Adrift,8.4,2,2,4712,-0.48
+Lost,Orientation,8.7,2,3,4928,0.03
+Lost,Everybody Hates Hugo,8.3,2,4,4743,-0.65
+Lost,...And Found,7.9,2,5,4580,-1.32
+Lost,Abandoned,8.3,2,6,4569,-0.65
+Lost,The Other 48 Days,8.8,2,7,5369,0.20
+Lost,Collision,8.7,2,8,4646,0.03
+Lost,What Kate Did,8.3,2,9,4574,-0.65
+Lost,The 23rd Psalm,8.7,2,10,4817,0.03
+Lost,The Hunting Party,8.5,2,11,4489,-0.31
+Lost,Fire + Water,7.3,2,12,4583,-2.34
+Lost,The Long Con,8.7,2,13,4693,0.03
+Lost,One of Them,8.7,2,14,4522,0.03
+Lost,Maternity Leave,8.4,2,15,4513,-0.48
+Lost,The Whole Truth,8.2,2,16,4333,-0.82
+Lost,Lockdown,9.1,2,17,5003,0.71
+Lost,Dave,8.3,2,18,4677,-0.65
+Lost,S.O.S.,7.9,2,19,4578,-1.32
+Lost,Two for the Road,8.9,2,20,5057,0.37
+Lost,?,8.8,2,21,4794,0.20
+Lost,Three Minutes,8.5,2,22,4515,-0.31
+Lost,Live Together Die Alone,9.4,2,23,7074,1.22
+Lost,A Tale of Two Cities,8.7,3,1,5460,0.03
+Lost,The Glass Ballerina,8.1,3,2,4580,-0.98
+Lost,Further Instructions,8,3,3,4520,-1.15
+Lost,Every Man for Himself,8.4,3,4,4578,-0.48
+Lost,The Cost of Living,8.2,3,5,4564,-0.82
+Lost,I Do,8.6,3,6,4826,-0.14
+Lost,Not in Portland,8.7,3,7,4817,0.03
+Lost,Flashes Before Your Eyes,9.1,3,8,5922,0.71
+Lost,Stranger in a Strange Land,7.2,3,9,4748,-2.51
+Lost,Tricia Tanaka Is Dead,8.3,3,10,4867,-0.65
+Lost,Enter 77,8.6,3,11,4711,-0.14
+Lost,Par Avion,8.3,3,12,4536,-0.65
+Lost,The Man from Tallahassee,9.1,3,13,5283,0.71
+Lost,Exposé,8.1,3,14,5509,-0.98
+Lost,Left Behind,8.2,3,15,4451,-0.82
+Lost,One of Us,8.7,3,16,4626,0.03
+Lost,Catch-22,8.5,3,17,4454,-0.31
+Lost,D.O.C.,8.2,3,18,4418,-0.82
+Lost,The Brig,9.1,3,19,5189,0.71
+Lost,The Man Behind the Curtain,9.2,3,20,5835,0.88
+Lost,Greatest Hits,9.2,3,21,5896,0.88
+Lost,Through the Looking Glass,9.7,3,22,11067,1.73
+Lost,The Beginning of the End,8.8,3,1,5895,0.20
+Lost,Confirmed Dead,8.7,3,2,4906,0.03
+Lost,The Economist,8.5,3,3,4595,-0.31
+Lost,Eggtown,8.1,3,4,4474,-0.98
+Lost,The Constant,9.7,3,5,11927,1.73
+Lost,The Other Woman,7.9,3,6,4364,-1.32
+Lost,Ji Yeon,8.4,3,7,4475,-0.48
+Lost,Meet Kevin Johnson,8.4,3,8,4454,-0.48
+Lost,The Shape of Things to Come,9,3,9,5232,0.54
+Lost,Something Nice Back Home,8,3,10,4239,-1.15
+Lost,Cabin Fever,8.7,3,11,4401,0.03
+Lost,There's No Place Like Home: Part 1,9,3,12,4828,0.54
+Lost,There's No Place Like Home: Part 2,9.3,3,13,5917,1.05
+Lost,There's No Place Like Home: Part 3,9.2,3,14,3817,0.88
+Lost,Because You Left,8.7,4,1,5153,0.03
+Lost,The Lie,8.3,4,2,4363,-0.65
+Lost,Jughead,8.6,4,3,4440,-0.14
+Lost,The Little Prince,8.3,4,4,4188,-0.65
+Lost,This Place Is Death,8.7,4,5,4395,0.03
+Lost,316,8.6,4,6,4317,-0.14
+Lost,The Life and Death of Jeremy Bentham,8.8,4,7,4755,0.20
+Lost,LaFleur,8.9,4,8,4948,0.37
+Lost,Namaste,8.5,4,9,4101,-0.31
+Lost,He's Our You,8.5,4,10,4069,-0.31
+Lost,Whatever Happened Happened,8.3,4,11,4077,-0.65
+Lost,Dead Is Dead,8.8,4,12,4345,0.20
+Lost,Some Like It Hoth,8.3,4,13,3809,-0.65
+Lost,The Variable,8.8,4,14,4521,0.20
+Lost,Follow the Leader,8.7,4,15,4159,0.03
+Lost,The Incident: Part 1,9.2,4,16,5967,0.88
+Lost,The Incident: Part 2,9.2,4,17,3844,0.88
+Lost,LA X - Part 1,8.7,5,1,5047,0.03
+Lost,LA X - Part 2,8.5,5,2,3076,-0.31
+Lost,What Kate Does,7.7,5,3,4305,-1.66
+Lost,The Substitute,8.3,5,4,3994,-0.65
+Lost,Lighthouse,8.1,5,5,3942,-0.98
+Lost,Sundown,8.1,5,6,3852,-0.98
+Lost,Dr. Linus,8.5,5,7,4010,-0.31
+Lost,Recon,7.9,5,8,3938,-1.32
+Lost,Ab Aeterno,9.2,5,9,6379,0.88
+Lost,The Package,7.9,5,10,3866,-1.32
+Lost,Happily Ever After,8.8,5,11,4776,0.20
+Lost,Everybody Loves Hugo,8.5,5,12,3980,-0.31
+Lost,The Last Recruit,8.2,5,13,3910,-0.82
+Lost,The Candidate,8.9,5,14,5057,0.37
+Lost,Across the Sea,8.2,5,15,5178,-0.82
+Lost,What They Died For,8.7,5,16,4598,0.03
+Lost,The End,8.2,5,17,10863,-0.82
+Lost,The End Part 2,9.5,5,18,179,1.39
+Got,Winter Is Coming,9.1,1,1,43950,0.71
+Got,The Kingsroad,8.8,1,2,33479,0.20
+Got,Lord Snow,8.7,1,3,31729,0.03
+Got,"Cripples, Bastards and Broken Things",8.8,1,4,30173,0.20
+Got,The Wolf and the Lion,9.1,1,5,31362,0.71
+Got,A Golden Crown,9.2,1,6,31030,0.88
+Got,You Win or You Die,9.2,1,7,31550,0.88
+Got,The Pointy End,9,1,8,29523,0.54
+Got,Baelor,9.6,1,9,41147,1.56
+Got,Fire and Blood,9.5,1,10,36280,1.39
+Got,The North Remembers,8.8,2,1,28443,0.20
+Got,The Night Lands,8.5,2,2,26949,-0.31
+Got,What Is Dead May Never Die,8.8,2,3,26627,0.20
+Got,Garden of Bones,8.8,2,4,25812,0.20
+Got,The Ghost of Harrenhal,8.8,2,5,25983,0.20
+Got,The Old Gods and the New,9.1,2,6,27109,0.71
+Got,A Man Without Honor,8.9,2,7,26399,0.37
+Got,The Prince of Winterfell,8.8,2,8,26122,0.20
+Got,Blackwater,9.7,2,9,44783,1.73
+Got,Valar Morghulis,9.4,2,10,31921,1.22
+Got,Valar Dohaeris,8.8,3,1,28204,0.20
+Got,Dark Wings Dark Words,8.6,3,2,25785,-0.14
+Got,Walk of Punishment,8.9,3,3,26043,0.37
+Got,And Now His Watch Is Ended,9.6,3,4,35108,1.56
+Got,Kissed by Fire,9,3,5,26624,0.54
+Got,The Climb,8.8,3,6,26385,0.20
+Got,The Bear and the Maiden Fair,8.7,3,7,25578,0.03
+Got,Second Sons,9,3,8,26219,0.54
+Got,The Rains of Castamere,9.9,3,9,96683,2.07
+Got,Mhysa,9.2,3,10,29458,0.88
+Got,Two Swords,9.1,4,1,32745,0.71
+Got,The Lion and the Rose,9.7,4,2,50733,1.73
+Got,Breaker of Chains,8.9,4,3,28042,0.37
+Got,Oathkeeper,8.8,4,4,26986,0.20
+Got,First of His Name,8.8,4,5,26226,0.20
+Got,The Laws of Gods and Men,9.7,4,6,47743,1.73
+Got,Mockingbird,9.1,4,7,28979,0.71
+Got,The Mountain and the Viper,9.7,4,8,50758,1.73
+Got,The Watchers on the Wall,9.6,4,9,43398,1.56
+Got,The Children,9.7,4,10,42810,1.73
+Got,The Wars to Come,8.5,5,1,28820,-0.31
+Got,The House of Black and White,8.5,5,2,25718,-0.31
+Got,High Sparrow,8.5,5,3,24951,-0.31
+Got,Sons of the Harpy,8.7,5,4,25596,0.03
+Got,Kill the Boy,8.6,5,5,25824,-0.14
+Got,Unbowed Unbent Unbroken,8,5,6,29017,-1.15
+Got,The Gift,9,5,7,28057,0.54
+Got,Hardhome,9.9,5,8,94772,2.07
+Got,The Dance of Dragons,9.5,5,9,41595,1.39
+Got,Mother's Mercy,9.1,5,10,40312,0.71
+Got,The Red Woman,8.5,6,1,38273,-0.31
+Got,Home,9.4,6,2,44860,1.22
+Got,Oathbreaker,8.7,6,3,32443,0.03
+Got,Book of the Stranger,9.1,6,4,34874,0.71
+Got,The Door,9.7,6,5,67706,1.73
+Got,Blood of My Blood,8.4,6,6,32204,-0.48
+Got,The Broken Man,8.6,6,7,31356,-0.14
+Got,No One,8.4,6,8,35482,-0.48
+Got,Battle of the Bastards,9.9,6,9,197085,2.07
+Got,The Winds of Winter,9.9,6,10,138218,2.07
+Got,Dragonstone,8.6,7,1,48932,-0.14
+Got,Stormborn,8.9,7,2,42486,0.37
+Got,The Queen's Justice,9.2,7,3,44409,0.88
+Got,The Spoils of War,9.8,7,4,84156,1.90
+Got,Eastwatch,8.8,7,5,42263,0.20
+Got,Beyond the Wall,9,7,6,61451,0.54
+Got,The Dragon and the Wolf,9.4,7,7,61216,1.22
+Got,Winterfell,7.5,8,1,127954,-2.00
+Got,A Knight of the Seven Kingdoms,7.8,8,2,126235,-1.49
+Got,The Long Night,7.4,8,3,209157,-2.17
+Got,The Last of the Starks,5.4,8,4,159916,-5.57
+Got,The Bells,5.9,8,5,186222,-4.72
+Got,The Iron Throne,4,8,6,236220,-7.95

@@ -1,0 +1,599 @@
+{
+ "Capitulo_name": [
+  {
+   "name": "Pilot: Part 1",
+   "Valoracion": "9.2",
+   "Votos": "(10,265)"
+  },
+  {
+   "name": "Pilot: Part 2",
+   "Valoracion": "9.1",
+   "Votos": "(7,833)"
+  },
+  {
+   "name": "Tabula Rasa",
+   "Valoracion": "8.5",
+   "Votos": "(6,189)"
+  },
+  {
+   "name": "Walkabout",
+   "Valoracion": "9.1",
+   "Votos": "(6,987)"
+  },
+  {
+   "name": "White Rabbit",
+   "Valoracion": "8.4",
+   "Votos": "(5,648)"
+  },
+  {
+   "name": "House of the Rising Sun",
+   "Valoracion": "8.2",
+   "Votos": "(5,502)"
+  },
+  {
+   "name": "The Moth",
+   "Valoracion": "8.5",
+   "Votos": "(5,534)"
+  },
+  {
+   "name": "Confidence Man",
+   "Valoracion": "8.7",
+   "Votos": "(5,624)"
+  },
+  {
+   "name": "Solitary",
+   "Valoracion": "8.5",
+   "Votos": "(5,292)"
+  },
+  {
+   "name": "Raised by Another",
+   "Valoracion": "8.7",
+   "Votos": "(5,379)"
+  },
+  {
+   "name": "All the Best Cowboys Have Daddy Issues",
+   "Valoracion": "8.8",
+   "Votos": "(5,413)"
+  },
+  {
+   "name": "Whatever the Case May Be",
+   "Valoracion": "8.0",
+   "Votos": "(5,129)"
+  },
+  {
+   "name": "Hearts and Minds",
+   "Valoracion": "8.2",
+   "Votos": "(5,097)"
+  },
+  {
+   "name": "Special",
+   "Valoracion": "8.2",
+   "Votos": "(4,973)"
+  },
+  {
+   "name": "Homecoming",
+   "Valoracion": "8.4",
+   "Votos": "(5,007)"
+  },
+  {
+   "name": "Outlaws",
+   "Valoracion": "8.6",
+   "Votos": "(5,116)"
+  },
+  {
+   "name": "...In Translation",
+   "Valoracion": "8.5",
+   "Votos": "(4,993)"
+  },
+  {
+   "name": "Numbers",
+   "Valoracion": "9.1",
+   "Votos": "(5,745)"
+  },
+  {
+   "name": "Deus Ex Machina",
+   "Valoracion": "9.1",
+   "Votos": "(5,636)"
+  },
+  {
+   "name": "Do No Harm",
+   "Valoracion": "8.9",
+   "Votos": "(5,450)"
+  },
+  {
+   "name": "The Greater Good",
+   "Valoracion": "8.3",
+   "Votos": "(4,803)"
+  },
+  {
+   "name": "Born to Run",
+   "Valoracion": "8.1",
+   "Votos": "(4,865)"
+  },
+  {
+   "name": "Exodus: Part 1",
+   "Valoracion": "9.1",
+   "Votos": "(5,698)"
+  },
+  {
+   "name": "Exodus: Part 2 (Part I)",
+   "Valoracion": "9.3",
+   "Votos": "(6,359)"
+  },
+  {
+   "name": "Exodus: Part 2 (Part II)",
+   "Valoracion": "9.3",
+   "Votos": "(3,101)"
+  },
+  {
+   "name": "Man of Science, Man of Faith",
+   "Valoracion": "9.1",
+   "Votos": "(6,084)"
+  },
+  {
+   "name": "Adrift",
+   "Valoracion": "8.4",
+   "Votos": "(4,712)"
+  },
+  {
+   "name": "Orientation",
+   "Valoracion": "8.7",
+   "Votos": "(4,928)"
+  },
+  {
+   "name": "Everybody Hates Hugo",
+   "Valoracion": "8.3",
+   "Votos": "(4,743)"
+  },
+  {
+   "name": "...And Found",
+   "Valoracion": "7.9",
+   "Votos": "(4,580)"
+  },
+  {
+   "name": "Abandoned",
+   "Valoracion": "8.3",
+   "Votos": "(4,569)"
+  },
+  {
+   "name": "The Other 48 Days",
+   "Valoracion": "8.8",
+   "Votos": "(5,369)"
+  },
+  {
+   "name": "Collision",
+   "Valoracion": "8.7",
+   "Votos": "(4,646)"
+  },
+  {
+   "name": "What Kate Did",
+   "Valoracion": "8.3",
+   "Votos": "(4,574)"
+  },
+  {
+   "name": "The 23rd Psalm",
+   "Valoracion": "8.7",
+   "Votos": "(4,817)"
+  },
+  {
+   "name": "The Hunting Party",
+   "Valoracion": "8.5",
+   "Votos": "(4,489)"
+  },
+  {
+   "name": "Fire + Water",
+   "Valoracion": "7.3",
+   "Votos": "(4,583)"
+  },
+  {
+   "name": "The Long Con",
+   "Valoracion": "8.7",
+   "Votos": "(4,693)"
+  },
+  {
+   "name": "One of Them",
+   "Valoracion": "8.7",
+   "Votos": "(4,522)"
+  },
+  {
+   "name": "Maternity Leave",
+   "Valoracion": "8.4",
+   "Votos": "(4,513)"
+  },
+  {
+   "name": "The Whole Truth",
+   "Valoracion": "8.2",
+   "Votos": "(4,333)"
+  },
+  {
+   "name": "Lockdown",
+   "Valoracion": "9.1",
+   "Votos": "(5,003)"
+  },
+  {
+   "name": "Dave",
+   "Valoracion": "8.3",
+   "Votos": "(4,677)"
+  },
+  {
+   "name": "S.O.S.",
+   "Valoracion": "7.9",
+   "Votos": "(4,578)"
+  },
+  {
+   "name": "Two for the Road",
+   "Valoracion": "8.9",
+   "Votos": "(5,057)"
+  },
+  {
+   "name": "?",
+   "Valoracion": "8.8",
+   "Votos": "(4,794)"
+  },
+  {
+   "name": "Three Minutes",
+   "Valoracion": "8.5",
+   "Votos": "(4,515)"
+  },
+  {
+   "name": "Live Together, Die Alone",
+   "Valoracion": "9.4",
+   "Votos": "(7,074)"
+  },
+  {
+   "name": "A Tale of Two Cities",
+   "Valoracion": "8.7",
+   "Votos": "(5,460)"
+  },
+  {
+   "name": "The Glass Ballerina",
+   "Valoracion": "8.1",
+   "Votos": "(4,580)"
+  },
+  {
+   "name": "Further Instructions",
+   "Valoracion": "8.0",
+   "Votos": "(4,520)"
+  },
+  {
+   "name": "Every Man for Himself",
+   "Valoracion": "8.4",
+   "Votos": "(4,578)"
+  },
+  {
+   "name": "The Cost of Living",
+   "Valoracion": "8.2",
+   "Votos": "(4,564)"
+  },
+  {
+   "name": "I Do",
+   "Valoracion": "8.6",
+   "Votos": "(4,826)"
+  },
+  {
+   "name": "Not in Portland",
+   "Valoracion": "8.7",
+   "Votos": "(4,817)"
+  },
+  {
+   "name": "Flashes Before Your Eyes",
+   "Valoracion": "9.1",
+   "Votos": "(5,922)"
+  },
+  {
+   "name": "Stranger in a Strange Land",
+   "Valoracion": "7.2",
+   "Votos": "(4,748)"
+  },
+  {
+   "name": "Tricia Tanaka Is Dead",
+   "Valoracion": "8.3",
+   "Votos": "(4,867)"
+  },
+  {
+   "name": "Enter 77",
+   "Valoracion": "8.6",
+   "Votos": "(4,711)"
+  },
+  {
+   "name": "Par Avion",
+   "Valoracion": "8.3",
+   "Votos": "(4,536)"
+  },
+  {
+   "name": "The Man from Tallahassee",
+   "Valoracion": "9.1",
+   "Votos": "(5,283)"
+  },
+  {
+   "name": "Exposé",
+   "Valoracion": "8.1",
+   "Votos": "(5,509)"
+  },
+  {
+   "name": "Left Behind",
+   "Valoracion": "8.2",
+   "Votos": "(4,451)"
+  },
+  {
+   "name": "One of Us",
+   "Valoracion": "8.7",
+   "Votos": "(4,626)"
+  },
+  {
+   "name": "Catch-22",
+   "Valoracion": "8.5",
+   "Votos": "(4,454)"
+  },
+  {
+   "name": "D.O.C.",
+   "Valoracion": "8.2",
+   "Votos": "(4,418)"
+  },
+  {
+   "name": "The Brig",
+   "Valoracion": "9.1",
+   "Votos": "(5,189)"
+  },
+  {
+   "name": "The Man Behind the Curtain",
+   "Valoracion": "9.2",
+   "Votos": "(5,835)"
+  },
+  {
+   "name": "Greatest Hits",
+   "Valoracion": "9.2",
+   "Votos": "(5,896)"
+  },
+  {
+   "name": "Through the Looking Glass",
+   "Valoracion": "9.7",
+   "Votos": "(11,067)"
+  },
+  {
+   "name": "The Beginning of the End",
+   "Valoracion": "8.8",
+   "Votos": "(5,895)"
+  },
+  {
+   "name": "Confirmed Dead",
+   "Valoracion": "8.7",
+   "Votos": "(4,906)"
+  },
+  {
+   "name": "The Economist",
+   "Valoracion": "8.5",
+   "Votos": "(4,595)"
+  },
+  {
+   "name": "Eggtown",
+   "Valoracion": "8.1",
+   "Votos": "(4,474)"
+  },
+  {
+   "name": "The Constant",
+   "Valoracion": "9.7",
+   "Votos": "(11,927)"
+  },
+  {
+   "name": "The Other Woman",
+   "Valoracion": "7.9",
+   "Votos": "(4,364)"
+  },
+  {
+   "name": "Ji Yeon",
+   "Valoracion": "8.4",
+   "Votos": "(4,475)"
+  },
+  {
+   "name": "Meet Kevin Johnson",
+   "Valoracion": "8.4",
+   "Votos": "(4,454)"
+  },
+  {
+   "name": "The Shape of Things to Come",
+   "Valoracion": "9.0",
+   "Votos": "(5,232)"
+  },
+  {
+   "name": "Something Nice Back Home",
+   "Valoracion": "8.0",
+   "Votos": "(4,239)"
+  },
+  {
+   "name": "Cabin Fever",
+   "Valoracion": "8.7",
+   "Votos": "(4,401)"
+  },
+  {
+   "name": "There's No Place Like Home: Part 1",
+   "Valoracion": "9.0",
+   "Votos": "(4,828)"
+  },
+  {
+   "name": "There's No Place Like Home: Part 2",
+   "Valoracion": "9.3",
+   "Votos": "(5,917)"
+  },
+  {
+   "name": "There's No Place Like Home: Part 3",
+   "Valoracion": "9.2",
+   "Votos": "(3,817)"
+  },
+  {
+   "name": "Because You Left",
+   "Valoracion": "8.7",
+   "Votos": "(5,153)"
+  },
+  {
+   "name": "The Lie",
+   "Valoracion": "8.3",
+   "Votos": "(4,363)"
+  },
+  {
+   "name": "Jughead",
+   "Valoracion": "8.6",
+   "Votos": "(4,440)"
+  },
+  {
+   "name": "The Little Prince",
+   "Valoracion": "8.3",
+   "Votos": "(4,188)"
+  },
+  {
+   "name": "This Place Is Death",
+   "Valoracion": "8.7",
+   "Votos": "(4,395)"
+  },
+  {
+   "name": "316",
+   "Valoracion": "8.6",
+   "Votos": "(4,317)"
+  },
+  {
+   "name": "The Life and Death of Jeremy Bentham",
+   "Valoracion": "8.8",
+   "Votos": "(4,755)"
+  },
+  {
+   "name": "LaFleur",
+   "Valoracion": "8.9",
+   "Votos": "(4,948)"
+  },
+  {
+   "name": "Namaste",
+   "Valoracion": "8.5",
+   "Votos": "(4,101)"
+  },
+  {
+   "name": "He's Our You",
+   "Valoracion": "8.5",
+   "Votos": "(4,069)"
+  },
+  {
+   "name": "Whatever Happened, Happened",
+   "Valoracion": "8.3",
+   "Votos": "(4,077)"
+  },
+  {
+   "name": "Dead Is Dead",
+   "Valoracion": "8.8",
+   "Votos": "(4,345)"
+  },
+  {
+   "name": "Some Like It Hoth",
+   "Valoracion": "8.3",
+   "Votos": "(3,809)"
+  },
+  {
+   "name": "The Variable",
+   "Valoracion": "8.8",
+   "Votos": "(4,521)"
+  },
+  {
+   "name": "Follow the Leader",
+   "Valoracion": "8.7",
+   "Votos": "(4,159)"
+  },
+  {
+   "name": "The Incident: Part 1",
+   "Valoracion": "9.2",
+   "Votos": "(5,967)"
+  },
+  {
+   "name": "The Incident: Part 2",
+   "Valoracion": "9.2",
+   "Votos": "(3,844)"
+  },
+  {
+   "name": "LA X - Part 1",
+   "Valoracion": "8.7",
+   "Votos": "(5,047)"
+  },
+  {
+   "name": "LA X - Part 2",
+   "Valoracion": "8.5",
+   "Votos": "(3,076)"
+  },
+  {
+   "name": "What Kate Does",
+   "Valoracion": "7.7",
+   "Votos": "(4,305)"
+  },
+  {
+   "name": "The Substitute",
+   "Valoracion": "8.3",
+   "Votos": "(3,994)"
+  },
+  {
+   "name": "Lighthouse",
+   "Valoracion": "8.1",
+   "Votos": "(3,942)"
+  },
+  {
+   "name": "Sundown",
+   "Valoracion": "8.1",
+   "Votos": "(3,852)"
+  },
+  {
+   "name": "Dr. Linus",
+   "Valoracion": "8.5",
+   "Votos": "(4,010)"
+  },
+  {
+   "name": "Recon",
+   "Valoracion": "7.9",
+   "Votos": "(3,938)"
+  },
+  {
+   "name": "Ab Aeterno",
+   "Valoracion": "9.2",
+   "Votos": "(6,379)"
+  },
+  {
+   "name": "The Package",
+   "Valoracion": "7.9",
+   "Votos": "(3,866)"
+  },
+  {
+   "name": "Happily Ever After",
+   "Valoracion": "8.8",
+   "Votos": "(4,776)"
+  },
+  {
+   "name": "Everybody Loves Hugo",
+   "Valoracion": "8.5",
+   "Votos": "(3,980)"
+  },
+  {
+   "name": "The Last Recruit",
+   "Valoracion": "8.2",
+   "Votos": "(3,910)"
+  },
+  {
+   "name": "The Candidate",
+   "Valoracion": "8.9",
+   "Votos": "(5,057)"
+  },
+  {
+   "name": "Across the Sea",
+   "Valoracion": "8.2",
+   "Votos": "(5,178)"
+  },
+  {
+   "name": "What They Died For",
+   "Valoracion": "8.7",
+   "Votos": "(4,598)"
+  },
+  {
+   "name": "The End",
+   "Valoracion": "8.2",
+   "Votos": "(10,863)"
+  },
+  {
+   "name": "The End Part 2",
+   "Valoracion": "9.5",
+   "Votos": "(179)"
+  }
+ ]
+}
