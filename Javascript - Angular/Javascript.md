@@ -54,9 +54,33 @@ Cuando las variables de JavaScript son declaradas, tienen un **valor inicial de 
 
  JavaScript proporciona ocho tipos de datos diferentes, los cuales son **undefined, null, boolean, string, symbol, bigint, number, y object** (que paso con float (decimales)?).
 
+ ### Transformando tipos de datos :
+
+ Tenemos funciones que convierten entre tipos de datos , por ejemplo :
+
+- Number (de caracter a numero) 
+
+- **parseInt** (de caracter a numero entero ) .
+La función parseInt() analiza una cadena y devuelve un entero. Recibe un segundo argumento para la **base (radix)**, que especifica la base del número representado en la cadena. La base (radix) puede ser un número entero entre 2 y 36.
+~~~
+parseInt(string, radix);
+~~~
+Y aquí hay un ejemplo:
+~~~
+const a = parseInt("11", 2);
+~~~~
+La variable radix indica que 11 está en el sistema binario, o base 2. Este ejemplo convierte la cadena 11 a un entero 3.
+
+- parseFloat (de entero a decimal )
+
+- String (de cualquier variable a un string).
+
+- El operador Typeof(argumento) nos devuelve los tipos de datos de las variables argumento.
+
+
 
  -----------------------------------------
-### Operadores :
+## Operadores :
 
 - Puedes fácilmente incrementar o sumar uno a una variable con el **operador ++**(o -- para decrementar).
 ~~~
@@ -88,6 +112,28 @@ Se mostrará un 6 en la consola.
 
 - El operador *= multiplica una variable por un número mientras que el opreador /= divide una variable entre otro número.
 
+###  Operador condicional (ternario)
+El operador condicional, también llamado el operador ternario, puede utilizarse como una expresión if-else de una sola línea.
+
+La sintaxis es a ? b : c, donde a es la condición, b es el código a ejecutar cuando la condición devuelve true, y c es el código a ejecutar cuando la condición devuelve false.
+
+La siguiente función utiliza una sentencia if/else para comprobar una condición:
+~~~
+function findGreater(a, b) {
+  if(a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater or equal";
+  }
+}
+~~~
+Esto puede reescribirse usando el operador condicional:
+~~~
+function findGreater(a, b) {
+  return a > b ? "a is greater" : "b is greater or equal";
+}
+~~~
 ### Escapa comillas literales en cadenas
 
 Cuando estás definiendo una cadena debes comenzar y terminar con una comilla simple o doble. ¿Qué pasa cuando necesitas una comilla literal: " o ' dentro de tu cadena?
@@ -312,6 +358,19 @@ addSum(3);
 ~~~
 addSum es una función sin una declaración de devolución (return). La función cambiará la variable global sum pero el valor devuelto de la función es **undefined**.
 
+### Devolver valores booleanos desde funciones
+Puesto que === devuelve true o false, podemos devolver el resultado de la comparación:
+~~~
+function isEqual(a, b) {
+  return a === b;
+}
+~~~
+### Patrón de devolución anticipado para funciones
+Cuando se alcanza una sentencia **return**, la ejecución de la función actual se detiene y el control se devuelve a la ubicación de la llamada.
+
+
+
+----------------------------------------------
 ## Estructuras de control 
 
 ## Estructura if : 
@@ -378,6 +437,369 @@ Al igual que el operador de igualdad, el operador mayor que convertirá los tipo
 El operador mayor o igual que (>=) compara el valor de dos números. Si el número de la izquierda es mayor o igual que el número de la derecha, devuelve true. De lo contrario, devuelve false.
 
 Al igual que el operador de igualdad, el operador mayor o igual que convertirá los tipos de datos mientras los compara.
+
+## Estructura switch-case 
+
+~~~
+    swich(variable)  {
+                  case valor1 : acciones1 ;
+                  break ; 
+                         .
+                         .
+                  case valorN : accionesN ;
+                  break ; 
+                  default :
+                  accionDefault ;
+                  break;
+~~~
+Una sentencia switch prueba un valor y puede tener muchas sentencias case que definen varios valores posibles. Las sentencias se ejecutan desde el primer valor case coincidente hasta que se encuentra un break.
+
+Los valores en las sentencias case se prueban con igualdad estricta (===). El break le dice a JavaScript que deje de ejecutar declaraciones. Si se omite break, se ejecutara la siguiente sentencia.
+
+En una declaración switch puede que no seas capaz de especificar todos los valores posibles como declaraciones de case (caso). En su lugar, **se puede añadir la declaración default, la cual se ejecutará si no se encuentran declaraciones case**.Una declaración default debe ser el último caso.
+
+---------------------------------------------
+
+## Objetos en Javascript 
+
+Los objetos son similares a los arreglos (arrays), excepto que en lugar de usar índices para acceder y modificar sus datos, accedes a los datos en objetos a través de propiedades (properties).
+
+Los objetos son útiles para almacenar datos de forma estructurada y pueden representar objetos del mundo real, como un gato.
+
+Por ejemplo, aquí hay un objeto de gato:
+~~~
+const cat = {
+  "name": "Whiskers",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Water", "Dogs"]
+};
+~~~
+La primer manera de acceder a propiedades de un objeto es a traves de notacion de puntos .
+
+La segunda manera de acceder a las propiedades de un objeto es con la notación de corchetes ([]). Si la propiedad del objeto al que intentas acceder tiene un espacio en el nombre, necesitarás usar notación de corchetes.
+
+### Acceder a propiedades de objetos con variables
+Otro uso de la notación de corchetes en objetos es acceder a una propiedad que está almacenada como el valor de una variable. **Esto puede ser muy útil para iterar a través de las propiedades de un objeto o para acceder a una tabla de búsqueda.**
+
+Aquí hay un ejemplo del uso de una variable para acceder a una propiedad:
+~~~
+const dogs = {
+  Fido: "Mutt",
+  Hunter: "Doberman",
+  Snoopie: "Beagle"
+};
+
+const myDog = "Hunter";
+const myBreed = dogs[myDog];
+console.log(myBreed);
+~~~
+La cadena Doberman se mostrará en la consola.
+
+Otra forma de usar este concepto es **cuando el nombre de la propiedad se recoge dinámicamente durante la ejecución del programa**, de la siguiente manera:
+~~~
+const someObj = {
+  propName: "John"
+};
+
+function propPrefix(str) {
+  const s = "prop";
+  return s + str;
+}
+
+const someProp = propPrefix("Name");
+console.log(someObj[someProp]);
+~~~
+
+someProp tendrá una cadena con un valor propName y la cadena John se mostrará en la consola.
+
+**Ten en cuenta que no usamos comillas alrededor del nombre de la variable cuando la usamos para acceder a la propiedad porque utilizamos el valor de la variable, no el nombre**.
+
+### Elimina propiedades en un objeto de JavaScript
+
+También podemos eliminar propiedades de objetos de esta forma:
+~~~
+delete ourDog.bark;
+~~~
+
+### Usar objetos para hacer búsquedas
+**Los objetos pueden ser considerados como un almacenamiento clave/valor, como un diccionario. Si tienes datos tabulares, puedes utilizar un objeto para hacer una búsqueda de valores en lugar de una declaración switch o encadenar if/else**. Esto es de mucha utilidad cuando se sabe que los datos de entrada están limitados a un cierto rango.
+
+Aquí hay un ejemplo de una simple búsqueda de alfabeto inverso:
+~~~
+const alpha = {
+  1:"Z",
+  2:"Y",
+  3:"X",
+  4:"W",
+  ...
+  24:"C",
+  25:"B",
+  26:"A"
+};
+
+alpha[2];
+alpha[24];
+
+const value = 2;
+alpha[value];
+~~~
+
+alpha[2] es la cadena Y, alpha[24] es la cadena C, y alpha[value] es la cadena Y.
+
+###  Verifica las propiedades de un objeto
+A veces es útil comprobar si existe o no la propiedad de un objeto dado. Podemos utilizar el método **.hasOwnProperty(propname)** para determinar si un objeto tiene una propiedad con ese nombre. **.hasOwnProperty() devuelve true o false si se encuentra la propiedad o no**.
+~~~
+const myObj = {
+  top: "hat",
+  bottom: "pants"
+};
+
+myObj.hasOwnProperty("top");
+myObj.hasOwnProperty("middle");
+~~~
+El primer hasOwnProperty devuelve true, mientras que el segundo devuelve false.
+
+## Ejercicio coleccion de discos :
+Colección de discos
+
+Se te da un objeto literal que representa una parte de tu colección de álbumes musicales. Cada álbum tiene un número de id único como clave y varias otras propiedades. No todos los álbumes tienen una información completa.
+
+Empiezas con una función updateRecords la cual toma un objeto literal, records, que contiene el álbum musical de la colección, un id, prop (como artist o tracks), y value. Completa la función usando las reglas siguientes para modificar el objeto pasado a la función.
+
+- Tu función siempre debe devolver el objeto de colección de registros completo.
+- Si prop no es tracks y value no es una cadena vacía, actualiza o establece la propiedad prop del album a value.
+- Si prop es tracks pero el álbum no tiene una propiedad tracks, crea un arreglo vacío y agrégale value a él.
+- Si prop es tracks y value no es una cadena vacía, agrega value al final del arreglo de tracks existentes del álbum.
+- Si value es una cadena vacía, elimina esa propiedad prop del álbum.
+
+### Resolucion :
+~~~
+// Configuración
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// Cambia solo el código debajo de esta línea
+function updateRecords(records, id, prop, value) {
+
+if (prop !== "tracks" && value !== ""){
+    let obj = records[id] ;
+    obj[prop] = value ;
+          } 
+
+if (prop == "tracks" && !records[id].hasOwnProperty("tracks")){
+      let canciones = [];
+      canciones.push(value);
+      //console.log(canciones)
+      let disco = records[id];
+      disco[prop] = canciones 
+              } else {
+                if (prop == "tracks" && value !== ""&& records[id].hasOwnProperty("tracks")){
+    let objeto = records[id];
+    let array = objeto["tracks"];
+    array.push(value);
+  } 
+              }
+
+  if (value == ""){
+    let disco = records[id];
+      delete disco[prop]
+  }
+
+  return records;
+}
+
+//updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'))
+
+console.log(updateRecords(recordCollection, 5439, 'tracks', 'occcc'))
+console.log(updateRecords(recordCollection, 5439, 'tracks', ''))
+~~~
+---------------------------------------------
+
+## Bucles while , do-while , for 
+
+### while: 
+~~~
+while (condicion boolean) {
+acciones del bucle 
+operador de incremento o decremento (i++ , i--)
+
+}
+~~~
+### do-while : 
+
+Primero se ejecuta el bloque de codigo y luego se verifica la condicion : 
+~~~
+do {acciones del bucle} 
+        while (condiciones del bucle).
+~~~
+La instruccion break nos permite salir del bucle : 
+por ejemplo   
+~~~
+if (condicion de corte ) {break }.
+~~~
+### Ejercicio busqueda de perfiles :
+
+<a href = 'https://www.freecodecamp.org/espanol/learn/javascript-algorithms-and-data-structures/basic-javascript/profile-lookup'>Link De freeCodeCamp</a>
+~~~
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  // Cambia solo el código debajo de esta línea
+  let i = 0 ;
+  let terminado = false;
+  do {
+      if (contacts[i].firstName == name){
+        let element = contacts[i];
+        if (element[prop]!==undefined){
+           terminado = true;
+           return element[prop]
+        } else {
+          return "No such property"
+        }
+        
+        
+      }
+      i++;
+      if (i>contacts.length-1){
+        return "No such contact"
+      }
+
+
+  } while (!terminado)
+  }
+console.log(lookUpProfile("Kristian", "likes"));
+~~~
+### for :
+
+Los bucles for se declaran con tres expresiones opcionales separadas por punto y coma:
+
+for (a; b; c), donde a es la sentencia de inicialización, b es la sentencia condicional, y c es la expresión final.
+
+La sentencia de inicialización se ejecuta una sola vez antes de que el bucle comience. Normalmente se utiliza para definir y configurar tu variable de bucle.
+
+### Iterar a través de un arreglo con un bucle "for"
+Una tarea común en JavaScript es iterar a través del contenido de un arreglo. Una forma de hacerlo es con un bucle for. Este código mostrará cada elemento del arreglo arr en la consola:
+~~~
+const arr = [10, 9, 8, 7, 6];
+
+for (let i = 0; i < arr.length; i++) {
+   console.log(arr[i]);
+}
+~~~
+Recuerda que los arreglos tienen una indexación basada en cero, lo que significa que el último índice del arreglo es igual a su longitud menos uno (length - 1).
+
+## Recursion 
+
+La recursión es el concepto que una función puede expresarse en términos de sí misma. Para ayudar a comprender esto, comienza pensando en la siguiente tarea: multiplica los primeros n elementos de un arreglo para crear el producto de esos elementos. Usando un bucle for, puedes hacer esto:
+~~~
+  function multiply(arr, n) {
+    let product = 1;
+    for (let i = 0; i < n; i++) {
+      product *= arr[i];
+    }
+    return product;
+  }
+~~~
+
+Sin embargo, nota que **multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]**. 
+
+Esto significa que puedes reescribir multiply en términos de sí misma y que nunca necesites hacer uso de un bucle.
+~~~
+  function multiply(arr, n) {
+    if (n <= 0) {
+      return 1;
+    } else {
+      return multiply(arr, n - 1) * arr[n - 1];
+    }
+  }
+~~~
+
+La versión recursiva de multiply se desglosa así. En el caso base, donde n <= 0, devuelve 1. Para valores más grandes de n, se llama a sí misma, pero con n - 1. Esa llamada de función se evalúa de la misma manera, llamando a multiply otra vez hasta que n <= 0. En este punto, todas las funciones pueden devolver y la multiply original devuelve la respuesta.
+
+**Nota: Las funciones recursivas deben tener un caso base cuando devuelven sin tener que llamar a la función de nuevo (en este ejemplo, cuando n <= 0), de lo contrario nunca podrán terminar de ejecutarse.**
+
+### Suma de los primeros n elementos de un arreglo mediante recursion :
+
+~~~
+function sum(arr, n) {
+   if (n<=0){
+     return 0
+   } else {
+     return sum(arr,n-1) + arr[n-1]
+   }
+}
+~~~
+
+## Generacion de numeros aleatorios 
+
+Genera fracciones aleatorias con JavaScript
+Los números aleatorios son útiles para crear comportamientos aleatorios.
+
+- JavaScript tiene una función **Math.random()** que genera un número decimal aleatorio entre 0 (inclusivo) y 1 (exclusivo). Así que Math.random() puede devolver un 0 pero nunca devuelve un 1.
+
+ - **Math.floor()** para redondear el número hacia abajo a su número entero más cercano.
+
+### Números enteros aleatorios dentro de un rango
+En lugar de generar un número entero aleatorio entre cero y un número dado como lo hicimos anteriormente, podemos generar un número entero aleatorio que se encuentre dentro de un rango de dos números específicos.
+
+Para ello, definiremos un número mínimo min y un número máximo max.
+~~~
+Math.floor(Math.random() * (max - min + 1)) + min
+~~~
+
+
+
+
+
+
+
+
+
+
 
 
 
