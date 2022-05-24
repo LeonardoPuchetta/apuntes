@@ -1,5 +1,9 @@
 <h1> React   </h1> 
 
+### Creando app desde cero 
+
+Creando aplicacion de pagina unica **npx create react app application-name**
+
 |  |  |
 | ------------- | ------------- |
 | Componentes  |   |

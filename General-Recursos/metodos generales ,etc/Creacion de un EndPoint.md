@@ -1,38 +1,7 @@
 # Creacion de un EndPoint 
-
-## Trabajo  a nivel del **backend** (server) .
-
 https://es.stackoverflow.com/questions/51758/qu%C3%A9-es-un-entry-point-y-un-end-point/51764 (explicacion de un entrypoint y un endpoint)
 
-Utilizamos la librería de **express** : 
-
-**server → routers → user.js** :	
-~~~
-const express = require('express');
-
-// importacion del controlador 
-const UserController = require('../controllers/user') ; 
-
-// variable para generar otra ruta 
-const api = express.Router();
-
-// cuando hacemos post en /sign-up se ejecuta UserController.signUp
-api.post ('/sign-up' , UserController.signUp);
-
-// cuando hacemos post en /sign-in se ejecuta UserController.signIn
-api.post ('/sign-in' , UserController.signIn);
-
-// cuando hacemos get en /users se ejecuta UserController.signIn
-api.get('/users' , UserController.getUsers);
-
-//exportamos la funcionalidad 
-module.exports = api;
-
-~~~
-El objeto **api** tiene distintos **metodos o peticiones : POST , GET , DELETE , COPY ,PUT , etc** .
-
-Necesita un **path** y **hacer referencia a una funcionalidad del objeto UserController** (el objeto del controlador )en este caso signIn , signUp , etc ya configurada .
-
+## Trabajo  a nivel del **backend** (server) .
 
 ### Controlador 
 ~~~
@@ -65,9 +34,6 @@ module.exports = mongoose.model ("User", UserSchema) ; 
 ~~~
 
 
-
-Realizamos las pruebas mediante el **POSTMAN** 
-
 **server → controllers → user.js** :
 
 Aqui quedan definidas las funcionalidades a asociar a cada ruta :
@@ -86,6 +52,56 @@ module.exports = {
     getUsers
 };
 ~~~
+
+
+Utilizamos la librería de **express** : 
+
+**server → routers → user.js** :	
+~~~
+const express = require('express');
+
+// importacion del controlador 
+const UserController = require('../controllers/user') ; 
+
+// variable para generar otra ruta 
+const api = express.Router();
+
+// cuando hacemos post en /sign-up se ejecuta UserController.signUp
+api.post ('/sign-up' , UserController.signUp);
+
+// cuando hacemos post en /sign-in se ejecuta UserController.signIn
+api.post ('/sign-in' , UserController.signIn);
+
+// cuando hacemos get en /users se ejecuta UserController.signIn
+api.get('/users' , UserController.getUsers);
+
+//exportamos la funcionalidad 
+module.exports = api;
+
+~~~
+El objeto **api** tiene distintos **metodos o peticiones : POST , GET , DELETE , COPY ,PUT , etc** .
+
+Necesita un **path** y **hacer referencia a una funcionalidad del objeto UserController** (el objeto del controlador )en este caso signIn , signUp , etc ya configurada .
+
+Luego en **server --> app.js** cargamos las rutas 
+
+~~~
+// traemos express 
+const express = require('express');
+const app = express() ;
+const {API_VERSION} = require('./config');
+
+//carga rutas de project
+const userRoutes = require('./routes/user');
+
+//router 
+app.use(`/api/${API_VERSION}`,userRoutes);
+
+module.exports = app ;
+~~~
+
+Realizamos las pruebas mediante el **POSTMAN** 
+
 
 ## Trabajo a nivel del frontend (client)
 
