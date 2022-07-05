@@ -1,56 +1,59 @@
-# HTML Basico y HTML5 
 
-## Imagenes :
+# Formularios 
 
-Puedes agregar imágenes a tu sitio web utilizando el elemento img, y apuntar a la URL de una imagen específica usando el atributo **src**.
- 
-HTML5 introduce etiquetas HTML más descriptivas. Estas incluyen **main, header, footer, nav, video, article, section**, entre otras.
+<a href='https://www.htmlquick.com/es/reference/tags.html'>https://www.htmlquick.com/es/reference/tags.html</a>
 
-Estas etiquetas dan una estructura descriptiva a tu HTML, hacen que tu HTML sea más fácil de leer, ayudan con la Optimización de Motores de Búsqueda (SEO) y mejoran la accesibilidad.
+## Generalidades:
 
- La etiqueta HTML5 **main** ayuda a los motores de búsqueda y otros desarrolladores a encontrar el contenido principal de tu página.
 
-## Enlaces :
-Puedes usar los elementos **a (anchor)** para enlazar a contenido fuera de tu página web.
+## **Form**
 
-Los elementos a requieren un **atributo href** con la dirección web de destino. También necesitan un texto anchor. Por ejemplo:
+<a href='https://www.htmlquick.com/es/reference/tags/form.html'>https://www.htmlquick.com/es/reference/tags/form.html</a>
+
+Puedes construir formularios web que realmente envíen datos a un servidor usando sólo HTML puro. Puedes hacer esto especificando un atributo action en tu elemento **form**. 
 ~~~
-<a href="https://www.freecodecamp.org"> this links to freecodecamp.org </a>
+<form action="url-where-you-want-to-submit-form-data">
+  		<input >
+</form>
+~~~
+Agreguemos un botón submit a tu formulario. Al hacer clic en este botón se enviarán los datos de tu formulario a la URL especificada con el atributo action de tu formulario. O sea que action y el boton submit estan enlazados . 
+~~~
+<button type="submit">Enviar</button>
+~~~
+### **Form - atributos**
+
+### Atributos action y method
+
+~~~
+<form action="/my-handling-form-page" method="post">
+
+</form>
 ~~~
 
-Los elementos a (anchor) también pueden utilizarse para crear enlaces internos para saltar a diferentes secciones dentro de una página web.
+- El atributo **action** define la ubicación (URL) donde se envían los datos que el formulario ha recopilado cuando se validan. Indica la ubicación del programa responsable de la manipulación de los datos enviados por el formulario.
 
-Para crear un enlace interno, asignas el atributo href de un enlace con un símbolo **hash #** más el valor del atributo id para el elemento al que deseas enlazar internamente, normalmente más abajo de la página.
+- El atributo **method** define con qué método HTTP se envían los datos (generalmente get o post) , determina el método a utilizar para acceder al URL determinada en el campo action.
 
- Luego necesitas agregar el mismo atributo id al elemento que estás enlazando. Un id es un atributo que describe un elemento de forma única.
+### Atributo autocomplete
 
-**target** es un atributo de etiqueta anchor que especifica dónde abrir el enlace. El valor **_blank** especifica abrir el enlace en una nueva pestaña. 
+Uno de dos valores que indica al navegador si debería sugerir opciones automáticamente para los controles de entrada, como un intento de adivinar lo que el usuario está tipeando 
 
-Crea enlaces muertos utilizando el símbolo hash :
-href = “#” en la etiqueta anchor a .
+- on: el navegador debería sugerir opciones automáticamente. Este es el valor por defecto.
+- off: el navegador no debería sugerir opciones automáticamente.
 
+### Atributo enctype
 
-### Convierte una imagen en un enlace:
-Puedes convertir elementos en enlaces, anidándolos dentro de un elemento a. 
+Un valor que especifica el método de codificación a utilizarse para los datos cuando el formulario es enviado. Existen tres valores posibles, insensibles a mayúsculas/minúsculas:
 
------------------------------
+- **application/x-www-form-urlencoded**: los espacios son reemplazados con signos más ("+") y los caracteres especiales son convertidos a valores HEX. Este es el valor por defecto.
 
-## Listas : 
-**Crea una lista no ordenada**
+- **multipart/form-data**: no se aplica ninguna codificación. Este valor es necesario para la subida de archivos.
 
-HTML tiene un elemento especial para crear listas no ordenadas, o listas con estilo de viñetas.
-Las listas no ordenadas comienzan con un elemento **ul** de apertura, seguido de cualquier número de elementos **li**
+- **text/plain**: solo los espacios son reemplazados por signos más ("+").
 
- Por último, las listas no ordenadas cierran con un **/ul**.
+## **input**
 
-**Crea una lista ordenada**
-
-HTML tiene otro elemento especial para crear listas ordenadas, o listas numeradas.
-Las listas ordenadas comienzan con un elemento de apertura **ol**, seguido de cualquier número de elementos **li**. Por último, las listas ordenadas se cierran con la etiqueta **/ol**.
-
-## Formularios : 
-
-Los elementos de entrada input son una forma conveniente de obtener información de tu usuario.
+Los elementos de entrada **input** son una forma conveniente de obtener información de tu usuario.
 Puedes crear una entrada de texto de esta manera:
 ~~~
 <input type="text">
@@ -61,18 +64,8 @@ El texto provisional es lo que se muestra en tu elemento de entrada input ante
 ~~~
 <input type="text" placeholder="this is placeholder text">
 ~~~
-Puedes construir formularios web que realmente envíen datos a un servidor usando sólo HTML puro. Puedes hacer esto especificando un atributo action en tu elemento **form**. 
-~~~
-<form action="url-where-you-want-to-submit-form-data">
-  		<input >
-</form>
-~~~
-Agreguemos un botón submit a tu formulario. Al hacer clic en este botón se enviarán los datos de tu formulario a la URL especificada con el atributo action de tu formulario. 
-~~~
-<button type="submit">Enviar</button>
-~~~
 
-
+<a href='https://www.htmlquick.com/es/reference/tags/input.html'>Tipos de inputs disponibles</a>
 
 ### HTML5 para requerir un campo
 Puedes requerir campos específicos de un formulario para que tu usuario no pueda enviarlo hasta que no los haya rellenado.
@@ -80,6 +73,30 @@ Por ejemplo, si deseas hacer obligatorio un campo de entrada de texto, puedes ag
 ~~~
 <input type="text" required>
 ~~~
+
+## **label**
+El elemento label representa una etiqueta que puede ser asociada a un control de formulario, y que se supone provee una descripción corta para éste.
+
+ Los navegadores pueden enlazar ambos elementos permitiendo que los usuarios establezcan el enfoque sobre el control al hacer clic en su etiqueta.
+
+Existen dos formas de asociar a un elemento label con un control: 
+
+- insertando al texto de la etiqueta y al control dentro de label;
+
+~~~
+<p><label>Nombre de usuario: <input type="text" name="usuario"></label></p>
+~~~
+
+- o haciendo que coincidan los valores del atributo id en el control y del atributo for en label.
+
+~~~
+  <p><label for="pensamiento_id">¿Qué estás pensando?:</label></p>
+
+  <p><input type="text" name="pensamiento" id="pensamiento_id"></p>
+~~~
+
+
+
 
 ## Botones de radio  
 Puedes usar botones de radio para preguntas en las que quieres que el usuario solo te dé una respuesta a partir de múltiples opciones. Los **botones de radio son un tipo de entrada  input** . 
@@ -146,44 +163,7 @@ Para hacer esto, simplemente agrega la palabra checked al interior de un eleme
 <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>
 ~~~
 
-## Doctype de un documento HTML  , head y body : 
- Hay algunos elementos que dan una estructura general a tu página, y deben incluirse en cada documento HTML. 
 
-En la parte superior de tu documento, necesitas decirle al navegador qué versión de HTML está utilizando tu página. HTML es un lenguaje en evolución, y se actualiza regularmente. La mayoría de los navegadores principales soportan la última especificación, que es HTML5. Sin embargo, páginas web más antiguas puede que hagan uso de versiones anteriores del lenguaje.
-
-Proporcionas al navegador esta información agregando la etiqueta 
-
-~~~
-<!DOCTYPE ...>
-~~~
- 
-en la primera línea, donde la parte ... es la versión de HTML. 
-
-Para HTML5, utilizas 
-~~~
-<!DOCTYPE html>.
-~~~
-El ! y DOCTYPE en mayúsculas es importante, especialmente para los navegadores más antiguos. El html no es sensible a mayúsculas y minúsculas.
-
-A continuación, el resto de tu código HTML necesita ser envuelto en etiquetas html. La apertura 
-~~~
-<!DOCTYPE html>
-<html>
-  codigo 
-
-
-
-</html>
-~~~
-
-
-
-
-Puedes agregar otro nivel de organización en tu documento HTML dentro de las etiquetas html con los elementos **head y body**. 
-
-Cualquier código con información sobre tu página iría dentro de la etiqueta head. 
-
-Entonces, cualquier código con el contenido de la página (lo que se muestra para un usuario) iría dentro de la etiqueta body.
 
 **Elementos de metadatos, tales como link, meta, title, y style, típicamente van dentro del elemento head**.
 
@@ -246,13 +226,6 @@ Podemos utilizar el atributo **pattern** para restringir el campo de caracteres 
 
 
 
-
-
-
-
-
-
-
-
+## Formularios con React :
 
 

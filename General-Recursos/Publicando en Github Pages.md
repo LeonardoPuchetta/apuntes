@@ -1,4 +1,4 @@
-# Publicando en Github Pages 
+# Publicando client en Github Pages 
 
 ### Una pagina sencilla 
 
@@ -44,7 +44,7 @@
 - git add . 
 - git commit -m "message"
 - git push (ya conoce el origen)
-- npm run deploy
+- npm run deploy (o yarn deploy)
 
 (**el proceso de implementacion de cambios puede tardar**)
 

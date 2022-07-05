@@ -182,8 +182,7 @@ de esta manera solo contaremos con los archivos de la rama especificada.
 | git remote | muestra conexiones remotas |
 | git remote -v | muestra rutas relacionadas a  conexiones remotas |
 | git fetch nombreConexion| trae actualizaciones del remoto y las guarda en el local |
-| git push --set-upstream nombreConexionRemota ramaLocalParaSincronizar| crea en nuestro repositorio remoto una rama llamada "ramaLocalParaSincronizar"
-que podemos combinar con la main del remoto |
+| git push --set-upstream nombreConexionRemota ramaLocalParaSincronizar| crea en nuestro repositorio remoto una rama llamada "ramaLocalParaSincronizar" que podemos combinar con la main del remoto |
 | ------------- | ------------- |
 | git clone URL | nos clona **la rama main** del repositorio alojado en URL |
 
