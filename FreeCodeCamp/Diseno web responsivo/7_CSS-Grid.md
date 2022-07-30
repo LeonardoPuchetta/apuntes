@@ -256,3 +256,15 @@ Por ejemplo, al establecer las propiedades display and grid-template-columns del
     grid-template-columns: auto 1fr
   }
  ~~~ 
+
+
+
+|**CSS GRID** |  |  |
+|----------------|------------------|--------------|
+|Contenedor principal | ------------- | **display** : grid |
+|Definir columnas y filas  | ------------- |**grid-template-rows**: auto 50px 10% 2fr 1fr; **grid-template-columns** : 2fr 1fr;  |
+|Definir columnas y filas mediante puntos de control  | ------------- |**grid-template-columns**: [x0] 1fr [x1] 2fr [x2] 1fr [x3];|
+|Espaciado entre columnnas/fila | ------------- | **grid-gap** : 1rem |
+|Espacio de elementos | ------------- | **grid-column :** 1 / 3 ; |
+|Espacio de elementos | ------------- | **grid-column :** 1 / 3 ; |
+|Espacio de elementos | ------------- | **grid-column :** 1 / 3 ; |
