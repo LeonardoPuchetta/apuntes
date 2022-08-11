@@ -15,13 +15,14 @@
 |Radio de un elemento|------------------|**border-radius:** 10px|
 |Relleno de un elemento | ------------------ | **padding:** 10px 20px 10px 10px |
 |Margen de un elemento | ------------------ | **margin:** 10px 20px 10px 10px |
-|Color de fondo | ------------------ | **background-color:** silver |
-|Color de fondo | ------------------ | **background-color:** silver |
-|Color de fondo | ------------------ | **background-color:** silver |
+|-------| ------------------ | ----------------------- |
+|**Posicionamiento**| ------------------ | --- | ------------------ | --------------- |
+|-------------| ------------------ | ---------------- |
+|**Animaciones**| ------------------ | --- | ------------------ | --------------- |
+|-------------| ------------------ | ---------------- |
+|-------------| ------------------ | ---------------- |
 
-|Aspecto|Descripcion|codigo|
-|----------------|------------------|--------------|
-| Renderizado | ---------|**display :** |
+
 
 ----------------------------------------------------
 # Conceptos fundamentales :
@@ -34,6 +35,77 @@
 - La propiedad CSS display especifica si un elemento es tratado como **block or inline element** y el diseño usado por sus hijos, como **flow layout(Diseño de Flujo), grid(Cuadricula) o flex(Flexible)**. 
 
 - Formalmente la propiedad display establece los tipos de **visualización interna y externa de un elemento**. La tipo externa establece la participacion de un elemento en flow layout; la tipo interna establece el layout(Diseño) de los hijos.
+
+## Posicion relativa de un elemento : 
+
+Cuando la posición de un elemento se establece a **relative**, te permite especificar como CSS lo moverá relativo a su posición actual dentro del flujo normal de la página. 
+
+Se empareja con las propiedades de desplazamiento CSS de **left o right, y top o bottom.** 
+
+Estas dicen cuántos pixeles, porcentajes, o ems se debe mover el elemento lejos de donde esté normalmente posicionado. 
+~~~
+  h2 {
+    position :relative;
+    top: 15px;
+  }
+~~~
+
+**Cambiando la posición de un elemento a relative no lo quita del flujo normal; otros elementos a su alrededor aún se comportarán como si dicho elemento estuviera en su posición predeterminada.** 
+
+Los desplazamientos CSS de top o bottom y left o right indican al navegador hasta que punto debe compensar un elemento en relación con el lugar donde se ubicara en el flujo normal del documento. 
+
+Está compensando un elemento lejos de un punto dado, lo que aleja el elemento del lado al que se hace referencia (efectivamente, en la dirección opuesta). 
+
+ Usando el desplazamiento top movió el h2 hacia abajo. Del mismo modo, usando un desplazamiento left mueve un elemento hacia la derecha. 
+
+
+## Posicion Absoluta de un elemento :
+
+La siguiente opción para la propiedad CSS position es **absolute**, que bloquea el elemento en su lugar en relación con su contenedor principal. 
+
+A diferencia de la posición relative, esto **elimina el elemento del flujo normal del documento**, por lo que los elementos circundantes lo ignoran.
+
+ Las propiedades de desplazamiento de CSS (superior o inferior e izquierda o derecha) se utilizan para ajustar la posición. 
+
+Un matiz del posicionamiento absoluto es que estará bloqueado en relación con su antepasado posicionado más cercano.
+
+**Si olvidas agregar una regla de posición al elemento principal, (esto generalmente se hace usando position: relative;), el navegador seguirá buscando en la jerarquía de elementos y, en última instancia tomará por defecto la etiqueta body.**
+
+
+## Posicion fixed(fija) de un elemento :
+
+El siguiente esquema de diseño que ofrece CSS es la posición **fixed**, que es un tipo de posicionamiento absoluto que bloquea un elemento relativo a la ventana del navegador.
+
+ Similar al posicionamiento absoluto, se usa con las propiedades de desplazamiento CSS y también elimina el elemento del flujo normal del documento. 
+
+Otros elementos ya no "se dan cuenta" de donde se coloca, lo que puede requerir algunos ajustes de diseño en otros lugares.
+
+Una diferencia clave entre las posiciones fixed y absolute es que **un elemento con una posición fija (fixed) no se moverá cuando el usuario se desplace.**
+
+## Elementos hacia la izquierda o hacia la derecha con la propiedad **float** :
+
+La siguiente herramienta de posicionamiento en realidad no usa position, sino que establece la propiedad **float** de un elemento.
+
+Los elementos flotantes se eliminan del flujo normal de un documento y **se empujan a left o right de su elemento padre contenedor.**
+
+ Se usa comúnmente con la propiedad **width** para especificar cuanto espacio horizontal requiere el elemento flotante. 
+
+ ## Posición de los elementos superpuestos con la propiedad **z-index** :
+
+Cuando los elementos son posicionados para superponerse (**i.e. usando position: absolute | relative | fixed | sticky**), el elemento que viene después dentro del marcado HTML aparecerá, por defecto, encima de los otros elementos.
+
+ Sin embargo, la propiedad z-index puede especificar el orden de cómo los elementos están apilados unos sobre otros. 
+
+**Debe ser un entero (i.e. un número entero y no un decimal), y los elementos que mayor valor tengan en z-index serán movidos más arriba en la pila de elementos que aquellos con valores menores.**
+
+
+## Centrar elementos horizontalmente:
+Otra técnica de posicionamiento consiste en centrar un elemento de bloque horizontalmente. Una manera de hacer esto es que **margin tenga valor auto**.
+
+Este método también funciona para imágenes. 
+
+**Las imágenes son elementos en línea de forma predeterminada, pero se pueden cambiar a elementos de bloque cuando se establece la propiedad display en block.**
+
 
 
 
@@ -128,6 +200,158 @@ En muchas situaciones usarás librerías de CSS. Estas librerías pueden sobrees
   }
   .blue-text {
     color: blue;
+  }
+~~~
+
+## Selectores de Atributos : 
+
+Existen otros selectores CSS que puedes utilizar para seleccionar grupos personalizados de elementos a los que quieras aplicar el mismo estilo. 
+
+selector de atributos **[attr=value]** para aplicar estilo a las casillas de verificación (checkboxes).  
+
+ Este selector busca estilos que tengan un valor de atributo específico. 
+~~~
+  [type='radio']{
+
+    margin-top: 10px;
+    margin-bottom:15px;
+
+  }
+~~~
+
+
+
+## Variables en CSS : 
+
+Las Variables CSS son una manera poderosa de modificar varias propiedades de estilos CSS a la vez, cambiando su valor en un único sitio. 
+
+Para crear una variable CSS, solo tienes que darle un nombre que comience con dos guiones (--) y asignarle un valor, como se muestra a continuación: 
+
+~~~
+  .penguin {
+    /
+      --penguin-skin: gray;
+    /
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: 300px;
+    height: 300px;
+  }
+~~~
+
+Por ejemplo podemos hacer en cualquier clase que tengamos creada :
+~~~ 
+background-color : var (--penguin-skin); 
+~~~
+
+## Valores de respaldo : 
+
+Cuando utilices tu variable como valor de una propiedad CSS, puedes adjuntar un valor de respaldo o "fallback", que será utilizado por el navegador si la variable dada no es válida.
+ 
+Nota:   Este valor de respaldo no se utiliza para aumentar la compatibilidad con otras versiones de navegadores y no funcionará en navegadores IE (Internet Explorer). 
+
+Más bien, se utiliza para que el navegador tenga un color para mostrar si no encuentra tu variable. 
+
+~~~
+    background: var(--pengiun-skin,black);
+~~~
+
+
+### Mejora la compatibilidad con navegadores por medio de configuraciones de respaldo o "browser fallbacks" 
+
+Cuando trabajes con código CSS, posiblemente te enfrentarás en algún momento con problemas de compatibilidad con otros navegadores web. 
+
+Por esta razón es importante proporcionar configuraciones de respaldo para otros navegadores o "browser fallbacks" para lidiar con posibles problemas de compatiblidad.
+
+Cuando tu navegador analiza el código CSS de una página web, ignora cualquier propiedad que no reconozca o soporte. 
+Por ejemplo, si utilizas una variable CSS para asignar un color de fondo en un sitio, Internet Explorer ignorará el color de fondo establecido porque no soporta el uso de variables CSS. En ese caso, el navegador utilizará cualquier valor que tenga establecido como valor de esa propiedad.
+
+ Si no puede encontrar ningún otro valor establecido para esa propiedad en el código, se revertirá al valor por defecto de ese navegador, lo que habitualmente no será lo ideal.
+
+Esto significa que si quieres proporcionar un valor de respaldo para el navegador, esto es tan sencillo como incluir otro valor más comúnmente soportado inmediatamente antes de tu declaración. 
+
+De este modo, un navegador antiguo tendrá ún valor que sí pueda soportar, mientras que un navegador más nuevo interpretará cualquier declaración que incluyas más adelante en la cascada. 
+
+~~~
+
+<style>
+  :root {
+    --red-color: red;
+  }
+  .red-box {
+    background: red;
+    background: var(--red-color);
+    height: 200px;
+    width:200px;
+  }
+</style>
+~~~
+
+## Herencia de variables CSS : 
+
+Cuando creas una variable, queda disponible para que la utilices dentro del selector en el que la hayas creado. 
+Esa variable también estará disponible en cualquiera de los descendientes de ese selector. 
+
+Esto ocurre porque las variables CSS son heredadas, al igual que las propiedades comunes.
+
+Para hacer uso de la herencia, las variables CSS suelen ser definidas en el elemento **:root**.
+
+**:root es un "pseudo-class selector"** (selector de pseudo-clase) que corresponde al elemento raíz o "root" del documento, que generalmente es el elemento html.
+
+ Al crear tus variables en :root, estarán disponibles globalmente y se podrán acceder desde cualquier otro selector en la hoja de estilo.
+ ~~~
+
+<style>
+  :root {
+    --penguin-skin: gray;
+    --penguin-belly: pink;
+    --penguin-beak: orange;
+  }
+~~~
+
+Cuando creas tus variables en :root, el valor de esa variable quedará establecido para toda la página.
+
+Luego podrás sobreescribir estas variables, configurándolas de nuevo dentro de un elemento específico.
+
+## Pseudoclases :
+
+<a href='https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes'>https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes</a>
+
+Una **pseudo-clase** es una palabra clave que se puede agregar a los selectores para seleccionar un estado específico de un elemento. 
+
+~~~
+<style>
+  a {
+    color: #000;
+  }
+  a:hover{
+    color:blue;
+  }
+~~~
+## Formas complejas usando CSS y HTML , pseudoelementos:
+
+**pseudo-elements ::before y ::after :**
+
+ **::before** crea un pseudo-elemento que es el primer hijo del elemento seleccionado; 
+
+**::after** crea un pseudo-elemento que es el último hijo del elemento seleccionado. 
+
+Para que los pseudo-elements ::before y ::after funcionen correctamente, deben tener una propiedad **content** definida.
+
+Esta propiedad generalmente se usa para agregar cosas como una foto o texto al elemento seleccionado. 
+Cuando se utilizan los pseudo-elements ::before y ::after para crear formas, la propiedad content sigue siendo necesaria, pero se establece en una cadena vacía.  
+~~~
+  .heart::before {
+    content: "";
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
   }
 ~~~
 
@@ -260,131 +484,11 @@ Todos los elementos tienen un **background-color** predeterminado de **transp
 
 
 
-## Selectores de Atributos : 
-
-Existen otros selectores CSS que puedes utilizar para seleccionar grupos personalizados de elementos a los que quieras aplicar el mismo estilo. 
-
-selector de atributos **[attr=value]** para aplicar estilo a las casillas de verificación (checkboxes).  
-
- Este selector busca estilos que tengan un valor de atributo específico. 
-~~~
-  [type='radio']{
-
-    margin-top: 10px;
-    margin-bottom:15px;
-
-  }
-~~~
 
 
+## Texto
 
-## Variables en CSS : 
-
-Las Variables CSS son una manera poderosa de modificar varias propiedades de estilos CSS a la vez, cambiando su valor en un único sitio. 
-
-Para crear una variable CSS, solo tienes que darle un nombre que comience con dos guiones (--) y asignarle un valor, como se muestra a continuación: 
-
-~~~
-  .penguin {
-    /
-      --penguin-skin: gray;
-    /
-    position: relative;
-    margin: auto;
-    display: block;
-    margin-top: 5%;
-    width: 300px;
-    height: 300px;
-  }
-~~~
-
-Por ejemplo podemos hacer en cualquier clase que tengamos creada :
-~~~ 
-background-color : var (--penguin-skin); 
-~~~
-
-## Valores de respaldo : 
-
-Cuando utilices tu variable como valor de una propiedad CSS, puedes adjuntar un valor de respaldo o "fallback", que será utilizado por el navegador si la variable dada no es válida.
- 
-Nota:   Este valor de respaldo no se utiliza para aumentar la compatibilidad con otras versiones de navegadores y no funcionará en navegadores IE (Internet Explorer). 
-
-Más bien, se utiliza para que el navegador tenga un color para mostrar si no encuentra tu variable. 
-
-~~~
-    background: var(--pengiun-skin,black);
-~~~
-
-
-### Mejora la compatibilidad con navegadores por medio de configuraciones de respaldo o "browser fallbacks" 
-
-Cuando trabajes con código CSS, posiblemente te enfrentarás en algún momento con problemas de compatibilidad con otros navegadores web. 
-
-Por esta razón es importante proporcionar configuraciones de respaldo para otros navegadores o "browser fallbacks" para lidiar con posibles problemas de compatiblidad.
-
-Cuando tu navegador analiza el código CSS de una página web, ignora cualquier propiedad que no reconozca o soporte. 
-Por ejemplo, si utilizas una variable CSS para asignar un color de fondo en un sitio, Internet Explorer ignorará el color de fondo establecido porque no soporta el uso de variables CSS. En ese caso, el navegador utilizará cualquier valor que tenga establecido como valor de esa propiedad.
-
- Si no puede encontrar ningún otro valor establecido para esa propiedad en el código, se revertirá al valor por defecto de ese navegador, lo que habitualmente no será lo ideal.
-
-Esto significa que si quieres proporcionar un valor de respaldo para el navegador, esto es tan sencillo como incluir otro valor más comúnmente soportado inmediatamente antes de tu declaración. 
-
-De este modo, un navegador antiguo tendrá ún valor que sí pueda soportar, mientras que un navegador más nuevo interpretará cualquier declaración que incluyas más adelante en la cascada. 
-
-~~~
-
-<style>
-  :root {
-    --red-color: red;
-  }
-  .red-box {
-    background: red;
-    background: var(--red-color);
-    height: 200px;
-    width:200px;
-  }
-</style>
-~~~
-
-## Herencia de variables CSS : 
-
-Cuando creas una variable, queda disponible para que la utilices dentro del selector en el que la hayas creado. 
-Esa variable también estará disponible en cualquiera de los descendientes de ese selector. 
-
-Esto ocurre porque las variables CSS son heredadas, al igual que las propiedades comunes.
-
-Para hacer uso de la herencia, las variables CSS suelen ser definidas en el elemento **:root**.
-
-**:root es un "pseudo-class selector"** (selector de pseudo-clase) que corresponde al elemento raíz o "root" del documento, que generalmente es el elemento html.
-
- Al crear tus variables en :root, estarán disponibles globalmente y se podrán acceder desde cualquier otro selector en la hoja de estilo.
- ~~~
-
-<style>
-  :root {
-    --penguin-skin: gray;
-    --penguin-belly: pink;
-    --penguin-beak: orange;
-  }
-~~~
-
-Cuando creas tus variables en :root, el valor de esa variable quedará establecido para toda la página.
-
-Luego podrás sobreescribir estas variables, configurándolas de nuevo dentro de un elemento específico.
-
-
-
-
-
-
---------------------------------------------------
-
-------------------------------------------------------
-# Diseno Visual Aplicado (CSS)
-
-
-
-## Resaltar texto : 
+### Resaltar texto : 
 
 Para poner el texto en negrita, puedes usar la etiqueta **strong**. Esto se usa a menudo para llamar la atención sobre el texto y simbolizar que es importante. 
 Con la etiqueta strong, el navegador aplica el CSS de **font-weight: bold**; al elemento. 
@@ -393,13 +497,13 @@ Con la etiqueta strong, el navegador aplica el CSS de **font-weight: bold**; 
    <p>Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at <strong>Stanford University</strong>.</p>
 ~~~
 
-## Subrayar texto : 
+### Subrayar texto : 
 
 Para subrayar texto, puedes usar la etiqueta u. (se trata de evitar su uso )
 Esto se utiliza a menudo para indicar que una sección del texto es importante, o algo que hay que recordar.
  Con la etiqueta u, el navegador aplica el CSS de text-decoration: underline; al elemento. 
 
-## Texto en cursiva : 
+### Texto en cursiva : 
 
 Para enfatizar el texto, puedes usar la etiqueta **em**.
 
@@ -408,7 +512,7 @@ Para enfatizar el texto, puedes usar la etiqueta **em**.
  <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
 ~~~
 
-## Tachar texto :
+### Tachar texto :
 
 Para tachar el texto, que es cuando una línea horizontal atraviesa los caracteres, puede usar la etiqueta **s**. 
 Muestra que una sección de texto ya no es válida. 
@@ -420,14 +524,14 @@ Con la etiqueta s, el navegador aplica el CSS de **text-decoration: line-throug
 ~~~
 <h4><s>Google</s> Alphabet</h4>
 
-## Lineas Horizontales :
+### Lineas Horizontales :
 
 Puedes usar la etiqueta **hr** para agregar una línea horizontal a través del ancho de su elemento contenedor. Esto se puede usar para definir un cambio de tema o para separar grupos de contenido visualmente. 
 
 
 
 
-## Tamaño de un elemento de encabezado frente a un elemento de párrafo :
+### Tamaño de un elemento de encabezado frente a un elemento de párrafo :
 
 El tamaño de fuente de las etiquetas de encabezado (h1 a h6) generalmente debe ser mayor que el tamaño de fuente de las etiquetas de párrafos.
  Esto hace que sea más sencillo para que el usuario entienda visualmente el diseño y el nivel de importancia de cada elemento en la página.
@@ -436,7 +540,7 @@ El tamaño de fuente de las etiquetas de encabezado (h1 a h6) generalmente deb
 
  --------------------------------
 
- ## Agregar box-shadow a un elemento tipo tarjeta:
+ ### Agregar box-shadow a un elemento tipo tarjeta:
 La propiedad **box-shadow** aplica una o más sombras a un elemento.
 La propiedad box-shadow toma valores para
 
@@ -454,11 +558,11 @@ Se pueden crear múltiples box-shadows usando comas para separar las propiedades
   box-shadow: 0 10px 20px rgba(0,0,0,0.19) , 0 6px 6px rgba(0,0,0,0.23);
 }
 ~~~
-## Opacidad de un elemento 
+### Opacidad de un elemento 
 
 La propiedad **opacity** en CSS se usa para ajustar la opacidad o, por el contrario, la transparencia de un elemento. 
 
-## Transformar texto : 
+### Transformar texto : 
 
 La propiedad **text-transform** en CSS se utiliza para cambiar la apariencia del texto. 
 
@@ -483,105 +587,22 @@ none
 Predeterminado: Usa el texto original
 ~~~
 
-## Grosor de caracteres : 
+### Grosor de caracteres : 
 
 La propiedad **font-weight** establece que tan gruesos o delgados son los caracteres en una sección de texto. 
 
-## Altura de cada linea de texto : 
+### Altura de cada linea de texto : 
 
 CSS ofrece la propiedad **line-height** para cambiar la altura de cada línea en un bloque de texto.
  Como sugiere el nombre, cambia la cantidad de espacio vertical que recibe cada línea de texto.
 
-
-## Hover y pseudoclases : 
-Una **pseudo-clase** es una palabra clave que se puede agregar a los selectores para seleccionar un estado específico de un elemento. 
-
-~~~
-<style>
-  a {
-    color: #000;
-  }
-  a:hover{
-    color:blue;
-  }
-~~~
-
-## Posicion relativa de un elemento : 
-
-Cuando la posición de un elemento se establece a **relative**, te permite especificar como CSS lo moverá relativo a su posición actual dentro del flujo normal de la página. 
-
-Se empareja con las propiedades de desplazamiento CSS de **left o right, y top o bottom.** 
-
-Estas dicen cuántos pixeles, porcentajes, o ems se debe mover el elemento lejos de donde esté normalmente posicionado. 
-~~~
-  h2 {
-    position :relative;
-    top: 15px;
-  }
-~~~
-
-**Cambiando la posición de un elemento a relative no lo quita del flujo normal; otros elementos a su alrededor aún se comportarán como si dicho elemento estuviera en su posición predeterminada.** 
-
-Los desplazamientos CSS de top o bottom y left o right indican al navegador hasta que punto debe compensar un elemento en relación con el lugar donde se ubicara en el flujo normal del documento. 
-
-Está compensando un elemento lejos de un punto dado, lo que aleja el elemento del lado al que se hace referencia (efectivamente, en la dirección opuesta). 
-
- Usando el desplazamiento top movió el h2 hacia abajo. Del mismo modo, usando un desplazamiento left mueve un elemento hacia la derecha. 
-
-
-## Posicion Absoluta de un elemento :
-
-La siguiente opción para la propiedad CSS position es **absolute**, que bloquea el elemento en su lugar en relación con su contenedor principal. 
-
-A diferencia de la posición relative, esto **elimina el elemento del flujo normal del documento**, por lo que los elementos circundantes lo ignoran.
-
- Las propiedades de desplazamiento de CSS (superior o inferior e izquierda o derecha) se utilizan para ajustar la posición. 
-
-Un matiz del posicionamiento absoluto es que estará bloqueado en relación con su antepasado posicionado más cercano.
-
-**Si olvidas agregar una regla de posición al elemento principal, (esto generalmente se hace usando position: relative;), el navegador seguirá buscando en la jerarquía de elementos y, en última instancia tomará por defecto la etiqueta body.**
-
-
-## Posicion fixed(fija) de un elemento :
-
-El siguiente esquema de diseño que ofrece CSS es la posición **fixed**, que es un tipo de posicionamiento absoluto que bloquea un elemento relativo a la ventana del navegador.
-
- Similar al posicionamiento absoluto, se usa con las propiedades de desplazamiento CSS y también elimina el elemento del flujo normal del documento. 
-
-Otros elementos ya no "se dan cuenta" de donde se coloca, lo que puede requerir algunos ajustes de diseño en otros lugares.
-
-Una diferencia clave entre las posiciones fixed y absolute es que **un elemento con una posición fija (fixed) no se moverá cuando el usuario se desplace.**
-
-## Elementos hacia la izquierda o hacia la derecha con la propiedad **float** :
-
-La siguiente herramienta de posicionamiento en realidad no usa position, sino que establece la propiedad **float** de un elemento.
-
-Los elementos flotantes se eliminan del flujo normal de un documento y **se empujan a left o right de su elemento padre contenedor.**
-
- Se usa comúnmente con la propiedad **width** para especificar cuanto espacio horizontal requiere el elemento flotante. 
-
- ## Posición de los elementos superpuestos con la propiedad **z-index** :
-
-Cuando los elementos son posicionados para superponerse (**i.e. usando position: absolute | relative | fixed | sticky**), el elemento que viene después dentro del marcado HTML aparecerá, por defecto, encima de los otros elementos.
-
- Sin embargo, la propiedad z-index puede especificar el orden de cómo los elementos están apilados unos sobre otros. 
-
-**Debe ser un entero (i.e. un número entero y no un decimal), y los elementos que mayor valor tengan en z-index serán movidos más arriba en la pila de elementos que aquellos con valores menores.**
-
-
-## Centrar elementos horizontalmente:
-Otra técnica de posicionamiento consiste en centrar un elemento de bloque horizontalmente. Una manera de hacer esto es que **margin tenga valor auto**.
-
-Este método también funciona para imágenes. 
-
-**Las imágenes son elementos en línea de forma predeterminada, pero se pueden cambiar a elementos de bloque cuando se establece la propiedad display en block.**
 
 -----------------------------------------
 
 . 
 
 
-## Gradiente lineal de CSS gradual :
+### Gradiente lineal de CSS gradual :
 La aplicación de un color en elementos HTML no se limita a un tono plano.
  CSS proporciona la capacidad de usar transiciones de color, también conocidas como degradados, en los elementos. 
 Esto se accede a través de la función **linear-gradient()** de la propiedad **background**.  
@@ -595,7 +616,7 @@ Los siguientes argumentos especifican el orden de los colores utilizados en el d
     background :linear-gradient(35deg,#CCFFFF,#FFCCCC);
 ~~~
 
-## Degradado lineal CSS para crear un elemento rayado 
+### Degradado lineal CSS para crear un elemento rayado 
 
 La función **repeating-linear-gradient()** es muy similar a **linear-gradient()** con la principal diferencia de que repite el patrón de degradado especificado. 
 
@@ -615,7 +636,7 @@ Si cada dos valores de parada de color son del mismo color, la mezcla no es visi
     );
 ~~~
 
-## Textura agregando un patrón sutil como imagen de fondo :
+### Textura agregando un patrón sutil como imagen de fondo :
 
 Una forma de agregar textura e interés a un fondo y hacer que se destaque más es agregar un patrón sutil. La clave está en el balance, dado que no querrás que el fondo destaque demasiado y quite atención al primer plano. 
 
@@ -628,7 +649,7 @@ La **propiedad background acepta la función url()** para enlazar una imagen
 </style>
 ~~~
 
-## Cambiar el tamaño de un elemento con interactividad:
+### Cambiar el tamaño de un elemento con interactividad:
 
 Para cambiar la escala de un elemento, CSS tiene la propiedad **transform**, junto con su función **scale()**.  
 
@@ -650,7 +671,7 @@ La propiedad transform tiene una variedad de funciones que el permiten escalar
 ~~~
 
 
-## Inclinar elementos:
+### Inclinar elementos:
 
 La siguiente función de la propiedad **transform** es **skewX()**, que inclinar el elemento seleccionado a lo largo de su eje X (horizontal). 
 
@@ -661,52 +682,10 @@ La siguiente función de la propiedad **transform** es **skewX()**, que incli
   }
 ~~~
 
-## Graficos usando CSS :
-Manipula el elemento cuadrado en el editor para crear la figura de luna. Primero, cambia el background-color a transparent, luego establece la propiedad border-radius en 50% para hacer la forma circular. Finalmente, cambia la propiedad box-shadow para asignar offset-x a 25px, offset-y a 10px, blur-radius a 0, spread-radius a 0 y el color a blue. 
 
-~~~
-  .center {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border-radius: 50%;
-    box-shadow: 25px 10px 0 0 blue;
-  }
-~~~
-
-
-## Formas complejas usando CSS y HTML , pseudoelementos:
-
-**pseudo-elements ::before y ::after :**
-
- **::before** crea un pseudo-elemento que es el primer hijo del elemento seleccionado; 
-
-**::after** crea un pseudo-elemento que es el último hijo del elemento seleccionado. 
-
-Para que los pseudo-elements ::before y ::after funcionen correctamente, deben tener una propiedad **content** definida.
-
-Esta propiedad generalmente se usa para agregar cosas como una foto o texto al elemento seleccionado. 
-Cuando se utilizan los pseudo-elements ::before y ::after para crear formas, la propiedad content sigue siendo necesaria, pero se establece en una cadena vacía.  
-~~~
-  .heart::before {
-    content: "";
-    background-color: pink;
-    border-radius: 50%;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: -25px;
-    left: 0px;
-  }
-~~~
 
 ------------------------------------
+
 
 ## Propiedades de CSS @keyframes y animación  :
 Para animar un elemento, necesitas conocer las **propiedades de animación y la regla @keyframes**.
@@ -847,12 +826,6 @@ Esto da como resultado un movimiento de rebote que es ideal para simular la pelo
 
 
 
-
-
-
-
-
-
 # Responsividad 
 
 ## Media-query (@)  : 
@@ -882,168 +855,5 @@ Por ejemplo, cuando la pantalla es más pequeña o más grande que el breakpoint
 
 La media siempre sobreescribe la root pero cuando pasa la cota max-width: 350px  deja de sobreescribir .
 
-
-
-
-
-
-
-
-
-
-
-
-
-
----------------------------------------------------
-
-# CSS flexbox 
-
-Colocar la **propiedad CSS display**: flex; en un elemento te permite usar otras propiedades flex para construir una página responsiva.
-
-Agregando **display: flex a un elemento lo convierte en un contenedor flexible**. Esto permite alinear cualquier elemento secundario de ese elemento en filas o columnas.
-
-Cuando describimos a flexbox como unidimensional destacamos el hecho que flexbox maneja el layout en una sola dimensión a la vez — ya sea como fila o como columna. Esto contrasta con el modelo bidimensional del Grid Layout de CSS, el cual controla columnas y filas a la vez.
-
-
-
-## Ejes : 
-
-- Cuando trabajamos con flexbox necesitamos pensar en términos de dos ejes — el eje principal y el eje cruzado. El eje principal está definido por la propiedad **flex-direction**, y el eje cruzado es perpendicular a este.
- 
- - La creación de una fila alineara los elementos secundarios a lo largo de una linea horizontal(**flex-direction : row**), y la creación de una columna alineara los elementos secundarios a lo largo de una linea vertical(**flex-direction : column**).
-
- - El **eje cruzado** siempre sera perpendicular el eje principal
-
- - Otras opciones para **flex-direction son row-reverse y column-reverse.** 
-
- - El valor predeterminado para la propiedad flex-direction es row.
-
- ## Valores por defecto al declarar un contenedor flex :
-
- Todos los ítems flex contenidos se comportarán de la siguiente manera.
-
-~~~
-    - Los ítems se despliegan sobre una fila (la propiedad flex-direction por defecto es row).
-    - Los ítems empiezan desde el margen inicial sobre el eje principal.
-    - Los ítems no se ajustan en la dimensión principal, pero se pueden contraer.
-    - Los ítems se ajustarán para llenar el tamaño del eje cruzado.
-    - La propiedad flex-basis es definida como auto.
-    - La propiedad flex-wrap es definida como nowrap.
-~~~
-
-## Contenedores multilinea con **flex-wrap :**
-
-- Si bien flexbox es un modelo unidimensional, es posible lograr que nuestros ítems flex sean repartidos en varías líneas. Haciendo esto, se deberá considerar cada línea como un nuevo contenedor flex. Cualquier distribución del espacio solo sucederá dentro de esa línea, sin referenciar las líneas colaterales.
-
-- Para lograr repartirse en varias líneas añada la propiedad **flex-wrap con el valor wrap**. Cuando los ítems sean demasiados para desplegarlos en una línea, serán repartidos en la línea siguiente.
-
-## Distribucion del espacio disponible entre los items flex : 
-
-- Si tenemos tres ítems con un ancho de 100 pixeles en un contenedor de 500 pixeles de ancho, entonces el espacio que se necesita para colocar nuestros ítems es de 300 pixeles. Esto deja 200 pixeles de espacio disponible. Si no cambiamos los valores iniciales entonces flexbox colocará ese espacio después del último ítem.
-
-- Si en cambio quisiéramos que los ítems crecieran para llenar ese espacio, entonces necesitaremos un método para distribuir el espacio sobrante entre los ítems. Es justo lo que harán las propiedades flex que aplicaremos a dichos ítems.
-
-- ### **flex-basis** 
-- Con flex-basis se define el tamaño de un ítem en términos del espacio que deja como espacio disponible. El valor inicial de esta propiedad es auto — en este caso el navegador revisa si los ítems definen un tamaño. **Si los ítems no tiene un tamaño entonces el tamaño de su contenido es usado como flex-basis**. Y por eso, apenas declarado display: flex en el padre a fin de crear ítems flex, todos estos ítems se ubicaron en una sola fila y tomaron solo el espacio necesario para desplegar su contenido.
-
-- <a href='https://www.paradigmadigital.com/dev/diferencia-flex-basis-width/'>https://www.paradigmadigital.com/dev/diferencia-flex-basis-width/</a>
-
-- ### **flex-grow** 
-
-- Con la propiedad flex-grow definida como un entero positivo, **los ítems flex pueden crecer en el eje principal a partir de flex-basis**. Esto hará que el ítem se ajuste y tome todo el espacio disponible del eje, o una proporción del espacio disponible si otro ítem también puede crecer.
-
-- Podemos usar flex-grow apropiadamente para distribuir el espacio en proporciones. Si otorgamos al primer ítem un valor flex-grow de 2 y a los otros un valor de 1, entonces 2 partes serán dadas al primer ítem  
-
-
-- ### **flex-shrink** 
-
-- Así como la propiedad flex-grow se encarga de añadir espacio sobre el eje principal, **la propiedad flex-shrink controla como se contrae**. Si no contamos con suficiente espacio en el contenedor para colocar los ítems y flex-shrink posee un valor entero positivo, el ítem puede contraerse a partir de flex-basis. Así como podemos asignar diferentes valores de flex-grow con el fin que un ítem se expanda más rápido que otros — un ítem con un valor más alto de flex-shrink se contraerá más rápido que sus hermanos que poseen valores menores.
-
-## Alineación, justificación y distribución del espacio libre entre ítems
-
-
- - ### Alinear elementos mediante la propiedad **justify-content :**
-
- - Algunas veces los elementos flexibles dentro de un contenedor flexible no llenan todo el espacio del contenedor. Es común querer indicarle al CSS cómo alinear y espaciar los elementos flexibles de una determinada manera. Afortunadamente, la propiedad **justify-content** tiene varias opciones para hacer esto.
-
-  - La **dirección en la que están dispuestos los elementos flexibles se llama el eje principal**. Para una fila, esta es una línea horizontal que recorta cada elemento. Y para una columna, el eje principal es una línea vertical a través de los elementos.
-
- -  Hay varias opciones para espaciar los elementos flexibles a lo largo de la línea que representa el eje principal. Uno de los más utilizados es **justify-content: center**;, el cual alinea hacia el centro todos los elementos flexibles dentro del contenedor flexible.
-  
-   Otras opciones incluyen:
-
-- **flex-start**: alinea los elementos con el inicio del contenedor flex. Para una fila, esto empuja los elementos a la izquierda del contenedor. Para una columna, esto empuja los elementos a la parte superior del contenedor.**Esta es la alineación predeterminada si no se especifica ningún tipo de justify-content**.
-
-- **flex-end**: alinea los elementos con el final del contenedor flex. Para una fila, esto empuja los elementos a la derecha del contenedor. Para una columna, esto empuja los elementos a la parte inferior del contenedor.
-
-- **space-between**: alinea los elementos en el centro del eje principal, con un espacio extra entre los elementos. Los primeros y últimos elementos son empujados hasta el borde del contenedor flexible. Por ejemplo, en una fila el primer elemento está en el lado izquierdo del contenedor, el último elemento está en el lado derecho del contenedor, luego el espacio restante se distribuye uniformemente entre los demás elementos.
-
-- **space-around**: similar a space-between pero los primeros y últimos elementos no están fijados en los bordes del contenedor, el espacio se distribuye alrededor de todos los elementos con la mitad de un espacio en ambos extremos del contenedor flexible.
-
-- **space-evenly**: Distribuye el espacio de manera uniforme entre los elementos flexibles con un espacio completo en ambos extremos del contenedor flexible
-
-- ###  Propiedad **align-items**
-
-- Los contenedores flexibles también tienen un eje transversal que es el opuesto al eje principal. Para las filas, el eje transversal es vertical y para las columnas, el eje transversal es horizontal.
-
-- CSS ofrece la propiedad **align-items para alinear elementos flexibles a lo largo del eje transversal**. Para una fila, le indica al CSS como empujar los elementos en toda la fila hacia arriba o hacia abajo dentro del contenedor. Y para una columna, como empujar todos los elementos hacia la izquierda o hacia la derecha dentro del contenedor.
-
-Los diferentes valores disponibles para align-items incluyen:
-
-- **flex-start**: alinea los elementos con el inicio del contenedor flexible. Para las filas, esto alinea los elementos a la parte superior del contenedor. Para las columnas, esto alinea los elementos a la parte izquierda del contenedor.
-
-- **flex-end**: alinea los elementos con el final del contenedor flexible. Para las filas, esto alinea los elementos a la parte inferior del contenedor. Para las columnas, esto alinea los elementos a la parte derecha del contenedor.
-
-- **center**: alinea los elementos hacia el centro. Para las filas, esto alinea los elementos verticalmente (igual espacio por encima y por debajo de los elementos). Para columnas, esto las alinea horizontalmente (igual espacio a la izquierda y a la derecha de los elementos).
-
-- **stretch**: estira los elementos para llenar el contenedor flexible. Por ejemplo, los elementos de filas son estirados para llenar el contenedor flexible de arriba hacia abajo. Este es el valor predeterminado si no se especifica ningún tipo de align-items.
-
-- **baseline**: alinea los elementos con sus líneas base. Una línea base es un concepto de texto, piensa en ella como la línea en la que se sitúan las letras.
-
-
-### Propiedad abreviada **flex**
-
-- Hay un atajo disponible para establecer varias propiedades flex a la vez. Las propiedades flex-grow, flex-shrink, y flex-basis pueden establecerse utilizando la propiedad flex.
-
-~~~
-Por ejemplo: 
-
-flex: 1 0 10px; 
-
-establecerá las propiedades del elemento en flex-grow: 1;, flex-shrink: 0;, y flex-basis: 10px;.
-~~~
-- La configuración predeterminada de la propiedad es flex: 0 1 auto;.
-
-### Propiedad **order** para reorganizar los elementos
-
-- La propiedad order se utiliza para indicarle a CSS el orden en que aparecen los elementos flexibles en el contenedor flex. 
-
-- Por defecto, los elementos aparecerán en el mismo orden que vienen en el HTML de origen. La propiedad toma números como valores, y se pueden usar números negativos.
-
-### Propiedad **align-self**
-
-- La última propiedad para elementos flexibles es **align-self**. Esta propiedad te permite ajustar la alineación de cada elemento individualmente, en lugar de ajustarlos todos a la vez.
-
- - **Esto es útil ya que otras técnicas comunes de ajuste usan las propiedades CSS float, clear, y vertical-align, las cuales no funcionan en elementos flexibles**.
-
-- align-self acepta los mismos valores que align-items y reemplazará cualquier valor establecido por la propiedad align-items.
-
-|**CSS Flexbox**|||
-|----------------|------------------|--------------|
-| Definiendo un contenedor flex | ---------|**display :** flex |
-|Eje principal|------------------|**flex direction :** row ,row-reverse,column,column-reverse|
-|Colocar elementos en varias lineas |------------------|**flex wrap :** wrap , nowrap |
-|Ejes y colocacion|------------------|**flex-flow :** row wrap ; column nowrap|
-|**Propiedades de items flex**|||
-|Dimension basica de un elemento |------------------|**flex-basis :** 3rem|
-|Tamaño de los elementos cuando el contenedor primario se expande|------------------|**flex-grow :** 1 ; 2 ; 3 |
-|Tamaño de los elementos cuando el contenedor primario se contrae|------------------|**flex-shrink :** 1 ; 2 ; 3|
-|**Alineación, justificación y distribución del espacio libre entre ítems**|||
-|Alinear elementos sobre eje cruzado|------------------|**align-items :** stretch; flex-start; flex-end; center|
-|Alinear elementos sobre eje principal|------------------|**justify-content :** space-evenly ; flex-start ; flex-end ; center ; space-around ; space-between
-|
-|Alinear elementos individualmente|------------------|**align-self :** auto ;stretch ; center;flex-start ; flex-end ; baseline ; initial ; inherit
-|----------------|------------------|--------------|
 
 

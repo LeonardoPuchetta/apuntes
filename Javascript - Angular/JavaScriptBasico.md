@@ -45,7 +45,7 @@ Cuando las variables de JavaScript son declaradas, tienen un **valor inicial de 
  
   Si concatenas una cadena con una variable undefined, obtendrás una cadena de undefined.
 
-  ### const :
+  ### **const** :
 
   const tiene todas las características increíbles que tiene let, con el bono añadido de que las variables declaradas usando const son de solo lectura. **Son un valor constante, lo que significa que una vez que una variable es asignada con const, no se puede reasignar.**
 
@@ -828,9 +828,43 @@ Para ello, definiremos un número mínimo min y un número máximo max.
 Math.floor(Math.random() * (max - min + 1)) + min
 ~~~
 
-
-
-
+|Codigo|--------|Funcionalidad|
+| ------------- | ------------- |------|
+| **'use strict'** | -------------|En este modo la programacion requerira de formas mas formales o estrictas , ademas activa funcionalidades nuevas .|
+| **Declaracion de variables** |  ||
+| **var** | ------------- |var define una variable global o local|
+| **let** | ------------- |let permite definir variables al bloque o expresion donde se utilizara|
+| **const** | ------------- |las variables declaradas usando const son de solo lectura. **Son un valor constante, lo que significa que una vez que una variable es asignada con const, no se puede reasignar.**. Si podremos cambiar su contenido  si es un **array** o un **object** (son mutables pero no redefinibles)|
+| ------------- | ------------- |------|
+| **Tipos de datos** |  |ocho tipos de datos diferentes, los cuales son **undefined, null, boolean, string, symbol, bigint, number, y object**|
+| **Conversion entre tipos de datos**| ||
+| **Number** | ------------- |de caracter a numero|
+| **parseInt** | Recibe un segundo argumento para la base (radix), que especifica la base del número representado en la cadena. La base (radix) puede ser un número entero entre 2 y 36. |de caracter a numero entero  **parseInt(string, radix);**|
+| **parseFloat** | ------------- |de entero a decimal|
+| **String** | ------------- |de cualquier variable a un string|
+| **Typeof(argumento)**  | ------------- |nos devuelve los tipos de datos de las variables argumento|
+| ------------- | ------------- |------|
+| **Operadores** | ------------- |------|
+| **++** | ------------- |**i++**   equivalente a **i = i + 1**;|
+| **resto %**  | ------------- |entrega el resto de la división entre dos números.|
+| **+=**  | ------------- |realiza una asignacion compuesta con la adicion|
+| ***=**  | ------------- | multiplica una variable por un número|
+| /=  | ------------- |divide una variable entre otro número.|
+| **condicional (ternario)** | function findGreater(a, b) { return a > b ? "a is greater" : "b is greater or equal";} |La sintaxis es **a ? b : c** , donde a es la condición, b es el código a ejecutar cuando la condición devuelve true, y c es el código a ejecutar cuando la condición devuelve false|
+| ------------- | ------------- |------|
+| **Arreglos**| ------------- |------|
+| Definicion de arreglos | corchetes |var nombres = ["Loco" , "Malo" , "Feo" , "Uruguay" , "Esparta",562,95 ];|
+| ------------- | palabras new y array |var lenguajes = new Array ("php","js","Java","Phyton"); |
+| **.push()** | toma uno o más parámetros y los "empuja" al final del arreglo|  lenguajes.push(4); |
+| **.pop()**  | elimina el último elemento de un arreglo y devuelve ese elemento|let lengua = lenguajes.pop()|
+| **.shift()** | igual que .pop(), excepto que elimina el primer elemento en lugar del último |------|
+| **.unshift()** | funciona exactamente como .push(), pero en lugar de añadir el elemento al final del arreglo, unshift() añade el elemento al principio del arreglo  |------|
+| ------------- | ------------- |------|
+| **Objetos** | Los objetos son similares a los arreglos (arrays), excepto que en lugar de usar índices para acceder y modificar sus datos, accedes a los datos en objetos a través de propiedades (properties).  |------|
+| ------------- | ------------- |------|
+| ------------- | ------------- |------|
+| ------------- | ------------- |------|
+| ------------- | ------------- |------|
 
 
 
