@@ -39,7 +39,7 @@ for (let x = 1;x <= 100; x++) {
 
   }
 
-//
+//con arrow function 
 const fizzBuzzRecursive = (randomNum, counter = 1) => {
     //si counter es mayor que randomNum sale (en counter = 101) 
     if (counter > randomNum) return;
@@ -73,3 +73,35 @@ function fizzBuzzConcate(){
 }
 
 fizzBuzzConcate();
+
+// Función anónima "saludo"
+const saludo = function () {
+    return "Hola";
+  };
+  
+  saludo; // ƒ () { return 'Hola'; }
+  saludo(); // 'Hola'
+
+
+ let miObjeto = {
+    saludar : (algo) => {console.log('hola' + " " + algo)},
+    despedirse : () => {console.log('chau')}
+ };
+
+ miObjeto.saludar('brooooo!!!');
+ miObjeto.despedirse();
+
+ let miArray = [1.12,12,12,"hola"];
+
+ console.log(miArray);
+ miArray.map(index => console.log(index*2));
+ console.log(miArray);
+ let dobles =  miArray.map(index =>index*2);
+ console.log(dobles);
+
+ let filtro = miArray.filter(index => index >= 13);
+ console.log(filtro)
+
+
+
+

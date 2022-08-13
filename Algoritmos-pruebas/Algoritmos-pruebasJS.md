@@ -1,6 +1,6 @@
-# Funciones clasicas y conceptos basicos  :
+# Problemas clasicos y conceptos basicos  :
 
-## Bucles while , do-while , for 
+## **Bucles while , do-while , for** 
 
 ### **while**: 
 ~~~
@@ -89,7 +89,7 @@ La sentencia de inicialización se ejecuta una sola vez antes de que el bucle co
 
 
 
-## Recursion 
+## **Recursion** 
 
 La recursión es el concepto que una función puede expresarse en términos de sí misma. Para ayudar a comprender esto, comienza pensando en la siguiente tarea: multiplica los primeros n elementos de un arreglo para crear el producto de esos elementos. Usando un bucle for, puedes hacer esto:
 ~~~
@@ -119,7 +119,7 @@ La versión recursiva de multiply se desglosa así. En el caso base, donde n <= 
 
 **Nota: Las funciones recursivas deben tener un caso base cuando devuelven sin tener que llamar a la función de nuevo (en este ejemplo, cuando n <= 0), de lo contrario nunca podrán terminar de ejecutarse.**
 
-### Suma de los primeros n elementos de un arreglo mediante recursion :
+### **Suma de los primeros n elementos de un arreglo mediante recursion** :
 
 ~~~
 function sum(arr, n) {
@@ -130,7 +130,7 @@ function sum(arr, n) {
    }
 }
 ~~~
-### Recursión para crear una cuenta regresiva
+### **Recursión para crear una cuenta regresiva**
 ~~~
 function countdown(n){
   if (n<1){
@@ -146,7 +146,7 @@ console.log(countdown(4))
 ~~~
 la llamada a console devuelve [ 4, 3, 2, 1 ]
 
-### Recursión para crear un rango de números
+### **Recursión para crear un rango de números**
 
 ~~~
 function rangeOfNumbers(startNum, endNum) {
@@ -175,6 +175,8 @@ for (let i=0 ; i< lenguajes.length; i++){
 document.write("<li>"+ lenguajes[i] + "</li>");
 }
 ~~~
+
+## **Problemas con arrays**
 
 ### **Recorriendo arrays con forEach** 
 
@@ -294,4 +296,32 @@ function fizzBuzzConcate(){
 
 fizzBuzzConcate();
 ~~~
+
+
+
+### **Preguntas frecuentes Javascript** :
+~~~
+- Que son los callbacks ?
+    Pasarle como parametro una funcion a otra funcion.
+
+- Que entiendes del funcionamiento de los callbacks ? (referencia vs invocacion)
+
+- Ejemplos de callbacks
+    array.map((element,index) => callbackfunction) ;
+    array.filter(element=>callbackfunction)
+~~~
+
+~~~
+Que es una funcion anonima ? 
+Cual es su diferencia con las funciones clasicas ? 
+Tienen alguna desventaja ? Cuando las usarias ? 
+~~~
+
+~~~
+Que es el hoisting? 
+Que ejemplos puedes dar ? 
+Como se relaciona con la TDZ?
+Como evitarias tener errores con la TDZ?
+~~~
+
 
