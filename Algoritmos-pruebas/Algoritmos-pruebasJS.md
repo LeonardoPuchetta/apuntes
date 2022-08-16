@@ -1,171 +1,12 @@
 # Problemas clasicos y conceptos basicos  :
 
-## **Bucles while , do-while , for** 
-
-### **while**: 
-~~~
-while (condicion boolean) {
-acciones del bucle 
-operador de incremento o decremento (i++ , i--)
-
-}
-~~~
-### **do-while** : 
-
-Primero se ejecuta el bloque de codigo y luego se verifica la condicion : 
-~~~
-do {acciones del bucle} 
-        while (condiciones del bucle).
-~~~
-La instruccion break nos permite salir del bucle : 
-por ejemplo   
-~~~
-if (condicion de corte ) {break }.
-~~~
-### Ejercicio busqueda de perfiles :
-
-<a href = 'https://www.freecodecamp.org/espanol/learn/javascript-algorithms-and-data-structures/basic-javascript/profile-lookup'>Link De freeCodeCamp</a>
-~~~
-const contacts = [
-  {
-    firstName: "Akira",
-    lastName: "Laine",
-    number: "0543236543",
-    likes: ["Pizza", "Coding", "Brownie Points"],
-  },
-  {
-    firstName: "Harry",
-    lastName: "Potter",
-    number: "0994372684",
-    likes: ["Hogwarts", "Magic", "Hagrid"],
-  },
-  {
-    firstName: "Sherlock",
-    lastName: "Holmes",
-    number: "0487345643",
-    likes: ["Intriguing Cases", "Violin"],
-  },
-  {
-    firstName: "Kristian",
-    lastName: "Vos",
-    number: "unknown",
-    likes: ["JavaScript", "Gaming", "Foxes"],
-  },
-];
-
-function lookUpProfile(name, prop) {
-  // Cambia solo el código debajo de esta línea
-  let i = 0 ;
-  let terminado = false;
-  do {
-      if (contacts[i].firstName == name){
-        let element = contacts[i];
-        if (element[prop]!==undefined){
-           terminado = true;
-           return element[prop]
-        } else {
-          return "No such property"
-        }
-        
-        
-      }
-      i++;
-      if (i>contacts.length-1){
-        return "No such contact"
-      }
-
-
-  } while (!terminado)
-  }
-console.log(lookUpProfile("Kristian", "likes"));
-~~~
-### **for** :
-
-Los bucles for se declaran con tres expresiones opcionales separadas por punto y coma:
-
-for (a; b; c), donde a es la sentencia de inicialización, b es la sentencia condicional, y c es la expresión final.
-
-La sentencia de inicialización se ejecuta una sola vez antes de que el bucle comience. Normalmente se utiliza para definir y configurar tu variable de bucle.
 
 
 
-## **Recursion** 
 
-La recursión es el concepto que una función puede expresarse en términos de sí misma. Para ayudar a comprender esto, comienza pensando en la siguiente tarea: multiplica los primeros n elementos de un arreglo para crear el producto de esos elementos. Usando un bucle for, puedes hacer esto:
-~~~
-  function multiply(arr, n) {
-    let product = 1;
-    for (let i = 0; i < n; i++) {
-      product *= arr[i];
-    }
-    return product;
-  }
-~~~
+## **Problemas con arrays**
 
-Sin embargo, nota que **multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]**. 
-
-Esto significa que puedes reescribir multiply en términos de sí misma y que nunca necesites hacer uso de un bucle.
-~~~
-  function multiply(arr, n) {
-    if (n <= 0) {
-      return 1;
-    } else {
-      return multiply(arr, n - 1) * arr[n - 1];
-    }
-  }
-~~~
-
-La versión recursiva de multiply se desglosa así. En el caso base, donde n <= 0, devuelve 1. Para valores más grandes de n, se llama a sí misma, pero con n - 1. Esa llamada de función se evalúa de la misma manera, llamando a multiply otra vez hasta que n <= 0. En este punto, todas las funciones pueden devolver y la multiply original devuelve la respuesta.
-
-**Nota: Las funciones recursivas deben tener un caso base cuando devuelven sin tener que llamar a la función de nuevo (en este ejemplo, cuando n <= 0), de lo contrario nunca podrán terminar de ejecutarse.**
-
-### **Suma de los primeros n elementos de un arreglo mediante recursion** :
-
-~~~
-function sum(arr, n) {
-   if (n<=0){
-     return 0
-   } else {
-     return sum(arr,n-1) + arr[n-1]
-   }
-}
-~~~
-### **Recursión para crear una cuenta regresiva**
-~~~
-function countdown(n){
-  if (n<1){
-    return []
-  } else {
-      const countArray = countdown(n-1);
-      countArray.unshift(n);
-      return countArray
-  }
-  
-}
-console.log(countdown(4))  
-~~~
-la llamada a console devuelve [ 4, 3, 2, 1 ]
-
-### **Recursión para crear un rango de números**
-
-~~~
-function rangeOfNumbers(startNum, endNum) {
-  if (startNum == endNum){
-    return [startNum];
-  } else {
-    const intervalArray = rangeOfNumbers(startNum,endNum -1);
-    intervalArray.push(endNum);
-    return intervalArray
-  }
- 
-};
-
-console.log(rangeOfNumbers(1,5))
-~~~
-la llamada a console devuelve [ 1, 2, 3, 4, 5 ]
-
-
-### **Recorrida de un array completo con for** :
+- ### **Recorrida de un array completo con for** :
 
 ~~~
 let lenguajes = new Array ("php","js","Java","Phyton"); 
@@ -176,9 +17,7 @@ document.write("<li>"+ lenguajes[i] + "</li>");
 }
 ~~~
 
-## **Problemas con arrays**
-
-### **Recorriendo arrays con forEach** 
+- ###  **Ejercicio 0 : Recorriendo arrays con forEach** 
 
  forEach itera todo el array , ejecuta la función indicada una vez por cada elemento del array.
 
@@ -193,6 +32,110 @@ lenguajes.forEach((elemento, indice)=> {-
 ~~~
 forEach recibe como parametro una funcion de callback
 
+- ### **Ejercicio 1**
+~~~
+- Implemente una funcion twoSum que dado un array de enteros y un entero K devuelva los pares de elementos de array que suman K 
+~~~
+
+- Solucion mediante for (**de orden n2**)
+~~~
+function twoSum(array,K){
+    //variable para armar arreglo de pares 
+    let pairSum = [];
+
+    for (let index = 0 ; index<array.length ; index++){
+        //recorremos los otros elementos del array empezando por el 
+        //siguiente al index 
+        for(let j = index +1 ; j < array.length ; j++){
+
+            if (array[index] + array[j] == K ){
+                pairSum.push([array[index],array[j]])
+            }
+        }
+    }
+    return pairSum
+}
+~~~
+
+- Solucion mediante objeto(lista de pares)(**de orden n**) : 
+
+~~~
+function twoSumList(array,K){
+    //variable para armar arreglo de pares 
+    let pairSum = [];
+    let pairList = {};
+
+    for (let index = 0 ; index<array.length ; index++){
+  
+        if (pairList[array[index].toString()] != undefined){
+            // si el elemento del array ya esta listado lo agrego al array de pares
+            // junto con el valor en la lista correspondiente a esa key 
+            pairSum.push([array[index],pairList[array[index].toString()]])
+
+        } else {
+                //si es undefined guardo el par numero:resto en la lista
+                auxNumber = K - array[index];
+                pairList[auxNumber.toString()]= array[index]
+        }
+    }
+
+    return pairSum
+}
+~~~
+- Solucion mediante ordenacion del array y posicion de indices de acuerdo al resultado de una suma 
+
+~~~
+function twoSumSort(array,K){
+
+    let pairSum= [];
+    let start = 0;
+    let end = array.length - 1 ;
+
+    //ordenamos el array de menor a mayor 
+    let orderArray = array.sort((a,b)=>a-b);
+
+    while (start<=end){
+
+        suma = orderArray[start] + orderArray[end];
+        if (suma == K){
+            pairSum.push([orderArray[start],orderArray[end]]);
+            //cambio indices
+            end--;
+            start++;
+
+        } else {
+            if (suma > K){
+                //si me paso en la suma muevo el indice final
+                end--;
+            } else {
+                if (suma < K){
+                    //si me falta para la suma muevo el indice inicial
+                    start++;
+                }
+            }
+        }
+    }
+    return pairSum
+
+}
+~~~
+
+- **Observaciones :**
+- Usamos sort() con una funcion de comparacion
+~~~
+let orderArray = array.sort((a,b)=>a-b);
+~~~
+- Si el resultado es negativo (b > a) coloca primero a y luego b , si el resultado es positivo coloca a despues que b .
+- Movemos los indices del array segun resultado de **suma**. 
+
+ - ###  **Ejercicio 3 : Ordenando arrays**
+
+ <a href="https://www.youtube.com/watch?v=7G5uT9OJZko&list=PLeYjfE1o93s8xVjPoJBqlIm31ljgopXVo&index=8">Link del ejercicio</a> 
+
+
+
+
+
 
 
 
@@ -201,7 +144,7 @@ forEach recibe como parametro una funcion de callback
 
 # Preguntas clasicas : 
 
-- ## **Funcion FizzBuzz** : 
+ ## **Funcion FizzBuzz** : 
 
 Esta prueba consiste en escribir un pequeño programa que imprima los números del 1 al 100, pero que cuando el número sea múltiplo de 3, imprima la palabra “Fizz”; para múltiplos de 5 deberá imprimir “Buzz”, finalmente cuando el número sea múltiplo de 3 y de 5, deberá imprimir “FizzBuzz”.
 
@@ -297,9 +240,323 @@ function fizzBuzzConcate(){
 fizzBuzzConcate();
 ~~~
 
+ ## **Detector de Anagramas**
+
+- Ambas palabras deben tener la misma longitud.
+- No se debe distinguir entre mayúsculas y minúsculas. Nacionalista es un anagrama de  Altisonancia, aunque en el primer caso la N sea mayúscula y en el segundo la A.
+- Cada letra de la primera palabra debe estar en la segunda.
+
+~~~
+function esAnagrama(palabra, posibleAnagrama){
+    // Cambiar a minúsculas ambas cadenas
+    palabra = palabra.toLowerCase();
+    posibleAnagrama = posibleAnagrama.toLowerCase();
+    
+    // Convertir ambas cadenas en un arreglo
+    palabra = palabra.split("");
+    posibleAnagrama = posibleAnagrama.split("");
+    
+    // Ordenar ese arreglo
+    palabra = palabra.sort();
+    posibleAnagrama = posibleAnagrama.sort();
+    
+    // Una vez ordenados, los convertimos a cadena nuevamente
+    palabra = palabra.join("");
+    posibleAnagrama = posibleAnagrama.join("");
+    
+    // Finalmente comparamos
+    
+    if(palabra === posibleAnagrama){
+      return true;
+    }else{
+      return false;
+    }
+  }
+~~~
+
+- **Observaciones :** 
+- Convertimos todos los caracteres de las cadenas a minusculas (**toLowerCase( )**). 
+- Convertimos las cadenas en arreglos para poder ordenarlas (**.split( )** sin argumento) y sustituimos las cadenas por dichos arreglos.
+- Ordenamos los elementos de los arrglos (**.sort( )**) .
+- Convertimos el ordenamiento en cadenas nuevamente (**.join( )**)
+- Comparamos ambos ordenamientos. 
+- El orden del algoritmo queda : **o(n) + log(n)**
+### **Detector de anagramas para oraciones mapeando los strings :**
+
+~~~
+function esAnagramaMap(frase, posibleAnagrama){
+
+      // eliminamos los espacios y cambiamos a minúsculas ambas cadenas
+      frase = frase.replaceAll(" ","").toLowerCase();
+      posibleAnagrama = posibleAnagrama.replaceAll(" ","").toLowerCase();
+
+      //chequeamos largo de frases 
+      if (frase.length == posibleAnagrama.length){
+
+            //mapeamos las frases
+            let fraseMap = wordToMap(frase);
+            let posibleAnagramaMap = wordToMap(posibleAnagrama);
+
+                for (let letter of Object.keys(fraseMap)){
+                    // por cada clave/letra de fraseMap comparo los cardinales en los mapeos 
+                    if (!(fraseMap[letter]==posibleAnagramaMap[letter])){
+                        return false 
+                    }
+                }
+
+            return true 
+
+      } else {
+        return false 
+      }
+
+}
+
+function wordToMap(frase){
+      //mapeamos la frase
+      //objeto vacio para almacenar clave/valor 
+      let letterMap = {};
+
+      for (let letter of frase){
+        if (letterMap[letter] == undefined){
+            letterMap[letter] = 1 ;
+        } else {
+            letterMap[letter] += 1 ;
+        }
+      }
+      return letterMap;
+}
+
+~~~
+
+- **Observaciones :** 
+- Convertimos todos los caracteres de las cadenas a minusculas (**toLowerCase( )**). 
+- Creamos la funcion auxiliar **wordToMap()** para mapear en un objeto la cantidad de veces que aparece una letra.
+- Si **no** coinciden los mapeos retorna false.
 
 
-### **Preguntas frecuentes Javascript** :
+### **Detector de anagramas para oraciones (mas legible) :**
+
+
+~~~
+  function esAnagramaFrase(frase, posibleAnagrama){
+
+    // eliminamos los espacios y cambiamos a minúsculas ambas cadenas
+    frase = frase.replaceAll(" ","").toLowerCase();
+    posibleAnagrama = posibleAnagrama.replaceAll(" ","").toLowerCase();
+   
+    // Convertir ambas cadenas en un arreglo y ordenamos los caracteres y convertimos a cadena nuevamente
+    frase = frase.split("").sort().join("");
+    posibleAnagrama = posibleAnagrama.split("").sort().join("");
+
+    // Finalmente comparamos 
+    if(frase === posibleAnagrama){
+      return true;
+    }else{
+      return false;
+    }
+  }
+~~~
+
+## **Trabajando con el DOM**:
+
+- ### **Ejercicio 1 (DOM y Strings):**
+<a href='https://www.youtube.com/watch?v=UIENaGNL6es&list=PLeYjfE1o93s8xVjPoJBqlIm31ljgopXVo&index=6'>Link del ejercicio</a>
+
+- **Html** :
+
+~~~
+<p class="upper-case">Dado este texto conviertalo todo a mayusculas </p>
+<p class = "first-upper-case">Dado este texto convierta la primera letra de cada palabra a mayusculas </p>
+
+  <form id="form-message">
+    <label for="input-message">Ingrese el mensaje</label>
+    <input id = "input-message" name = "input-message"/>
+    <button type="submit">Guardar</button>
+  </form>
+
+<ul id="message-list">
+  <li>Tus mensajes son:</li>
+</ul>
+
+<button id="upper-case-btn">Convertir la primera letra de cada palabra a mayusculas </button>
+~~~
+
+- **CSS :** 
+
+~~~
+.upper-case{
+    text-transform: uppercase;
+}
+.first-upper-case{
+    text-transform: capitalize;
+}
+~~~
+
+- **JAVASCRIPT**:
+~~~
+//seleccionamos el formulario
+const formulario = document.getElementById('form-message');
+
+//agrgamos escuchador de eventos
+formulario.addEventListener('submit',event =>{
+    //cancelamos el comportamiento por defecto del navegador 
+    event.preventDefault();
+    //usamos FormData y el metodo get 
+    let formDataElement = new FormData(event.target)
+
+    //tomamos el valor del input desde el formData
+    let inputMessage = formDataElement.get('input-message');
+
+    //seleccionamos la lista ul 
+    const list = document.getElementById('message-list');
+    //agregamos el li al ul
+    list.appendChild(createMessageElement(inputMessage));
+
+    clearInput('input-message');
+
+
+});
+
+function createMessageElement(message){
+    //creamos el li
+    let messageItem = document.createElement('li');
+
+    messageItem.className = "message-li";
+    //creamos un nodo de texto
+    let messageElement = document.createTextNode(message);
+    //agregamos el nodo de taxto al li 
+    messageItem.appendChild(messageElement);
+
+    //retorna el li con el nodo 
+    return messageItem
+}
+
+function clearInput(inputId){
+    document.getElementById(inputId).value = "";
+}
+
+const upperCaseButton = document.getElementById('upper-case-btn');
+
+upperCaseButton.addEventListener('click',event=>{
+    event.preventDefault();
+    let allMessage = document.getElementsByClassName('message-li');
+
+    for (li of allMessage){
+        li.classList.add('first-upper-case')
+    }
+
+})
+~~~
+
+- ### **Ejercicio 2 (Strings):**
+<a href='https://www.youtube.com/watch?v=T6j7x5o8fZk&list=PLeYjfE1o93s8xVjPoJBqlIm31ljgopXVo&index=7'>Link del ejercicio</a>
+
+
+
+
+- **JAVASCRIPT :**
+~~~
+let text = 'yo dono rosas , oro no doy';
+~~~
+
+//**parte 1 (forma iterativa)**
+~~~
+function reverse(text){
+let textReverse="";    
+for (letter of text) {   
+    textReverse = letter + textReverse ;  
+}
+return textReverse;
+}
+console.log(reverse(text))
+~~~
+
+//**parte 2 (desestructuracion)**
+~~~
+//La sintaxis de desestructuración es una expresión de JavaScript 
+//que permite desempacar valores de arreglos o 
+//propiedades de objetos en distintas variables.
+
+function destructuringReverse(text){
+    //separamos el string en un array 
+    let destructuringText = [...text];
+    //revertimos el array
+    destructuringText.reverse();
+    //juntamos el array y lo convertimos en string 
+    let textReverse = destructuringText.join("");
+
+    return textReverse
+
+}
+console.log(destructuringReverse(text));
+~~~
+
+//**parte 3 (recursion)**
+
+~~~
+function recursiveReverse(text){
+
+    //condicion de salida
+    if (text === ""){
+        return ""
+    }
+   //uso recursivo
+   return recursiveReverse(text.substring(1)) + text.charAt(0)  ;
+}
+
+console.log(recursiveReverse(text));
+~~~
+//**parte 4 
+// no se puede realizar porque los string son inmutables en javascript**
+
+
+
+//**parte 5 (palindrome)**
+
+~~~
+//funcion para limpiar texto de espacios y comas 
+function cleanTextFunction(text) {
+    let cleanText = text.toLowerCase().split(" ").join("").replace(",","");
+    return cleanText 
+}
+
+function isPalindrome(text){
+
+    //limpiamos texto
+    let cleanText = cleanTextFunction(text);
+    //invertimos 
+    let reverseCleanText = recursiveReverse(cleanText);
+    //retornamos la comparacion
+    return reverseCleanText===cleanText
+}
+
+isPalindrome(text);
+console.log(isPalindrome(text))
+~~~
+
+
+//**parte 6**
+~~~ 
+function reverseWord(text){
+
+    //guardamos las palabras de la frase en un array 
+    let textSplit = text.split(" ");
+
+    //invertimos cada palabra con map del array y guardamos en un nuevo array 
+    let textSplitInvert = textSplit.map(word => recursiveReverse(word));
+    //retornamos el string 
+    return textSplitInvert.join(" ")
+
+}
+console.log(reverseWord(text));
+~~~
+
+
+
+----------------------------------------------
+
+## **Preguntas/ejercicios frecuentes Javascript** :
 ~~~
 - Que son los callbacks ?
     Pasarle como parametro una funcion a otra funcion.
@@ -308,7 +565,8 @@ fizzBuzzConcate();
 
 - Ejemplos de callbacks
     array.map((element,index) => callbackfunction) ;
-    array.filter(element=>callbackfunction)
+    array.filter(element=>callbackfunction);
+    cuando se dispara algun evento (addEventListener)
 ~~~
 
 ~~~
@@ -323,5 +581,21 @@ Que ejemplos puedes dar ?
 Como se relaciona con la TDZ?
 Como evitarias tener errores con la TDZ?
 ~~~
+
+~~~
+- Detector de anagramas (roma - amor)
+~~~
+
+~~~
+- Suma de pares de numeros en array de enteros 
+~~~
+
+~~~
+Manipulacion del DOM
+~~~
+
+
+
+
 
 
