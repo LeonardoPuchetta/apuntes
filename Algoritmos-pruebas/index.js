@@ -481,6 +481,63 @@ console.log(reverseWord(text));
 
 
 
+function mergeArrays(arr1,arr2){
+ 
+    let combinedArray = [] ; 
+
+    while ( arr1.length && arr2.length) {
+        //saldra de este bucle cuando se vacie algun array
+
+        let firstElement;
+        if (arr1[0] < arr2[0] ){
+            //saco el primer elemento de arr1
+            firstElement = arr1.shift();
+            
+            
+        } else {
+             //saco el primer elemento de arr2
+             firstElement = arr2.shift();
+             
+        }
+        //agrego el elemento al array combinado
+        combinedArray.push(firstElement);
+
+    }
+
+    //concatenamos el array que todavia este con contenido 
+    //al array combinado
+    combinedArray = combinedArray.concat(arr1).concat(arr2);
+
+    return combinedArray
+}
+
+let arr1 = [1,10,11,13,0];
+let arr2 = [1,2,5,8,19,24];
 
 
+function mergeSort(arr){
+//condicion de parada 
+if (arr.length === 1 ){ return arr }
+
+    // partir arr a la mitad 
+    let mediumArray = Math.trunc(arr.length/2);
+    // let leftArray = arr.slice(0,mediumArray);
+    // let rightArray = arr.slice(mediumArray,arr.length);
+
+    //otra opcion usando splice():
+    let leftArray = arr.splice(0,mediumArray);
+    let rightArray = arr
+    let mergeLeft = mergeSort(leftArray);
+    let mergeRight = mergeSort(rightArray);
+
+    //ordenamos los pares ordenados con la funcion anterior 
+    return mergeArrays(mergeLeft,mergeRight);
+
+}
+
+console.log(mergeSort(arr1))
+
+Array.prototype.dameElElememnto = function(cb){
+    
+}
 

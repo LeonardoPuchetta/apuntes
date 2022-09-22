@@ -446,7 +446,7 @@ module.exports = {
 
 
 
-- Creamos las rutas en routes : 
+- Creamos las rutas en routes/**auth.js** : 
 
 ~~~
 const express = require('express');

@@ -132,6 +132,89 @@ let orderArray = array.sort((a,b)=>a-b);
 
  <a href="https://www.youtube.com/watch?v=7G5uT9OJZko&list=PLeYjfE1o93s8xVjPoJBqlIm31ljgopXVo&index=8">Link del ejercicio</a> 
 
+ ~~~
+- (1) Implemente un algoritmo que dado dos arrays ordenados obtenga un array ordenado combinando ambos arrays 
+- Analice su orden . 
+- Implemente un algoritmo para ordenar un array cualquiera 
+- Analice su orden . 
+ ~~~
+
+ - Parte (1) :
+ ~~~
+function mergeArrays(arr1,arr2){
+ 
+    let combinedArray = [] ; 
+
+    while ( arr1.length && arr2.length) {
+        //saldra de este bucle cuando se vacie algun array
+
+        let firstElement;
+        if (arr1[0] < arr2[0] ){
+            //saco el primer elemento de arr1
+            firstElement = arr1.shift();
+            console.log(arr1)
+            
+        } else {
+             //saco el primer elemento de arr2
+             firstElement = arr2.shift();
+             
+        }
+        //agrego el elemento al array combinado
+        combinedArray.push(firstElement);
+
+    }
+
+    //concatenamos el array que todavia este con contenido 
+    //al array combinado
+    combinedArray = combinedArray.concat(arr1).concat(arr2);
+
+    return combinedArray
+}
+ ~~~
+
+ - Parte (2) : 
+
+ - Parte (3) : 
+
+- **Usando la funcion sort()**
+ ~~~
+function sortArray(arr){
+
+    let arrayOrder = arr.sort((a,b)=>{
+        return a-b
+    })
+    
+    return arrayOrder
+} 
+ ~~~
+
+ - **Usando recursion, slice()/splice() y la funcion anterior**
+
+ <a href='https://www.youtube.com/watch?v=xDLs7PoOqqQ&list=PLeYjfE1o93s8xVjPoJBqlIm31ljgopXVo&index=9'>https://www.youtube.com/watch?v=xDLs7PoOqqQ&list=PLeYjfE1o93s8xVjPoJBqlIm31ljgopXVo&index=9</a>
+
+ ~~~
+function mergeSort(arr){
+//condicion de parada 
+if (arr.length === 1 ){ return arr }
+
+    // partir arr a la mitad 
+    let mediumArray = Math.trunc(arr.length/2);
+    // let leftArray = arr.slice(0,mediumArray);
+    // let rightArray = arr.slice(mediumArray,arr.length);
+
+    //otra opcion usando splice():
+    let leftArray = arr.splice(0,mediumArray);
+    let rightArray = arr
+    let mergeLeft = mergeSort(leftArray);
+    let mergeRight = mergeSort(rightArray);
+
+    //ordenamos los pares ordenados con la funcion anterior 
+    return mergeArrays(mergeLeft,mergeRight);
+
+ ~~~
+
+
+
 
 
 
@@ -588,6 +671,8 @@ Como evitarias tener errores con la TDZ?
 
 ~~~
 - Suma de pares de numeros en array de enteros 
+
+- Ordenamiento de arrays 
 ~~~
 
 ~~~

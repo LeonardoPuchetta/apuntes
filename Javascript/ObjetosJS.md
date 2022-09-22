@@ -231,3 +231,5 @@ function lookUpProfile(name, prop) {
   }
 console.log(lookUpProfile("Kristian", "likes"));
 ~~~
+
+
